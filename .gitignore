@@ -1,0 +1,8 @@
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+/public/adm
+/public/assets/img/qrcode/*
+/storage
