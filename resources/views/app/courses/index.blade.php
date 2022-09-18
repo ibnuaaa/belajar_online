@@ -170,14 +170,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Dhananjay Preet</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 
@@ -202,14 +195,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Litha Jethaani</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">$1Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 
@@ -234,14 +220,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Adam Gilvork</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">$Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 
@@ -266,14 +245,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Shilpa Shekh</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">$1Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 
@@ -298,14 +270,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Shaurya Preet</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">$1Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 
@@ -330,14 +295,7 @@
 								</ul>
 							</div>
 
-							<div class="education_block_footer">
-								<div class="education_block_author">
-									<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-									<h5><a href="instructor-detail.html">Litha Anshal</a></h5>
-								</div>
-								<div class="cources_price_foot"><span class="price_off">$Rp 300.000</span>Free</div>
-							</div>
-
+							
 						</div>
 					</div>
 

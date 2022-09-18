@@ -310,16 +310,12 @@
               <li><i class="ti-shine"></i>Assessment:<strong>Yes</strong></li>
             </ul>
           </div>
-          <div class="ed_view_link pb-3">
-            <a href="#" class="btn btn-theme enroll-btn">Enroll Now<i class="ti-angle-right"></i></a>
-            <a href="#" class="btn btn-outline-theme enroll-btn">Enroll Now<i class="ti-angle-right"></i></a>
-          </div>
 
           <div class="px-4 pt-4 pb-0 b-t">
             <h5 class="mb-3">About The instructor</h5>
             <div class="ins_info">
               <div class="ins_info_thumb">
-                <img src="assets/img/user-8.jpg" class="img-fluid" alt="">
+                <img src="/frontend/assets/img/user-5.jpg" class="img-fluid" alt="">
               </div>
               <div class="ins_info_caption">
                 <h4 class="text-dark">Dr. Mahimpurra Ville</h4>
