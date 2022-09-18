@@ -51,7 +51,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -94,7 +94,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-2.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -137,7 +137,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-3.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -180,7 +180,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-4.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -223,7 +223,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-5.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -266,7 +266,7 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+									<a href="course-detail.html"><img src="/frontend/assets/img/co-6.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
@@ -341,7 +341,7 @@
 								<div class="singles_items">
 									<div class="edu_cat">
 										<div class="pic">
-											<a class="pic-main" href="#" style="background-image:url(https://via.placeholder.com/700x500);"></a>
+											<a class="pic-main" href="#" style="background-image:url(/frontend/assets/img/co-1.jpg);"></a>
 										</div>
 										<div class="edu_data">
 											<h4 class="title"><a href="#">Finance & Accounting</a></h4>
@@ -357,7 +357,7 @@
 								<div class="singles_items">
 									<div class="edu_cat">
 										<div class="pic">
-											<a class="pic-main" href="#" style="background-image:url(https://via.placeholder.com/700x500);"></a>
+											<a class="pic-main" href="#" style="background-image:url(/frontend/assets/img/co-1.jpg);"></a>
 										</div>
 										<div class="edu_data">
 											<h4 class="title"><a href="#">Gym & Lifestyle</a></h4>
@@ -373,7 +373,7 @@
 								<div class="singles_items">
 									<div class="edu_cat">
 										<div class="pic">
-											<a class="pic-main" href="#" style="background-image:url(https://via.placeholder.com/700x500);"></a>
+											<a class="pic-main" href="#" style="background-image:url(/frontend/assets/img/co-1.jpg);"></a>
 										</div>
 										<div class="edu_data">
 											<h4 class="title"><a href="#">Health & Fitness</a></h4>
@@ -389,7 +389,7 @@
 								<div class="singles_items">
 									<div class="edu_cat">
 										<div class="pic">
-											<a class="pic-main" href="#" style="background-image:url(https://via.placeholder.com/700x500);"></a>
+											<a class="pic-main" href="#" style="background-image:url(/frontend/assets/img/co-1.jpg);"></a>
 										</div>
 										<div class="edu_data">
 											<h4 class="title"><a href="#">Software & Development</a></h4>
@@ -405,7 +405,7 @@
 								<div class="singles_items">
 									<div class="edu_cat">
 										<div class="pic">
-											<a class="pic-main" href="#" style="background-image:url(https://via.placeholder.com/700x500);"></a>
+											<a class="pic-main" href="#" style="background-image:url(/frontend/assets/img/co-1.jpg);"></a>
 										</div>
 										<div class="edu_data">
 											<h4 class="title"><a href="#">Business Development</a></h4>
@@ -500,7 +500,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
 										</div>
 
@@ -532,7 +532,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.9 (29)</div>
 										</div>
 
@@ -564,7 +564,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (60)</div>
 										</div>
 
@@ -596,7 +596,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.8 (45)</div>
 										</div>
 
@@ -628,7 +628,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
 										</div>
 
@@ -660,7 +660,7 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="course-detail.html"><img src="https://via.placeholder.com/700x500" class="img-fluid" alt=""></a>
+											<a href="course-detail.html"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.8 (70)</div>
 										</div>
 

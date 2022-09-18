@@ -13,16 +13,8 @@
 
 				<div class="property_video">
 					<div class="thumb">
-						<img class="pro_img img-fluid w100" src="https://via.placeholder.com/700x500" alt="7.jpg">
-						<div class="overlay_icon">
-							<div class="bb-video-box">
-								<div class="bb-video-box-inner">
-									<div class="bb-video-box-innerup">
-										<a href="https://www.youtube.com/watch?v=A8EI6JaFbv4" data-toggle="modal" data-target="#popup-video" class="theme-cl"><i class="ti-control-play"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
+						<img class="pro_img img-fluid w100" src="/frontend/assets/img/ruby.png" alt="7.jpg">
+
 					</div>
 				</div>
 
@@ -73,98 +65,8 @@
 
 			<div class="col-lg-8 col-md-8">
 
-				<!-- Overview -->
 				<div class="edu_wraper">
-					<h4 class="edu_title">Course Overview</h4>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-					<h6>Requirements</h6>
-					<ul class="lists-3">
-						<li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-						<li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-						<li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-						<li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-						<li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-					</ul>
-				</div>
-
-				<div class="edu_wraper">
-					<h4 class="edu_title">Course Circullum</h4>
-					<div id="accordionExample" class="accordion shadow circullum">
-
-						<!-- Part 1 -->
-						<div class="card">
-							<div id="headingOne" class="card-header bg-white shadow-sm border-0">
-							<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="d-block position-relative text-dark collapsible-link py-2">Part 01: How To Learn Web Designing Step by Step</a></h6>
-							</div>
-							<div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
-							<div class="card-body pl-3 pr-3">
-								<ul class="lectures_lists">
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 01</div>Web Designing Beginner</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 02</div>Startup Designing with HTML5 & CSS3</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 03</div>How To Call Google Map iFrame</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 04</div>Create Drop Down Navigation Using CSS3</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 05</div>How to Create Sticky Navigation Using JS</li>
-								</ul>
-							</div>
-							</div>
-						</div>
-
-						<!-- Part 2 -->
-						<div class="card">
-							<div id="headingTwo" class="card-header bg-white shadow-sm border-0">
-							<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="d-block position-relative collapsed text-dark collapsible-link py-2">Part 02: Learn Web Designing in Basic Level</a></h6>
-							</div>
-							<div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" class="collapse">
-							<div class="card-body pl-3 pr-3">
-								<ul class="lectures_lists">
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 01</div>Web Designing Beginner</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 02</div>Startup Designing with HTML5 & CSS3</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 03</div>How To Call Google Map iFrame</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 04</div>Create Drop Down Navigation Using CSS3</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 05</div>How to Create Sticky Navigation Using JS</li>
-								</ul>
-							</div>
-							</div>
-						</div>
-
-						<!-- Part 3 -->
-						<div class="card">
-							<div id="headingThree" class="card-header bg-white shadow-sm border-0">
-							<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="d-block position-relative collapsed text-dark collapsible-link py-2">Part 03: Learn Web Designing in Advance Level</a></h6>
-							</div>
-							<div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" class="collapse">
-							<div class="card-body pl-3 pr-3">
-								<ul class="lectures_lists">
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 01</div>Web Designing Beginner</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 02</div>Startup Designing with HTML5 & CSS3</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 03</div>How To Call Google Map iFrame</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 04</div>Create Drop Down Navigation Using CSS3</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 05</div>How to Create Sticky Navigation Using JS</li>
-								</ul>
-							</div>
-							</div>
-						</div>
-
-						<!-- Part 04 -->
-						<div class="card">
-							<div id="headingThree" class="card-header bg-white shadow-sm border-0">
-							<h6 class="mb-0 accordion_title"><a href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="d-block position-relative collapsed text-dark collapsible-link py-2">Part 04: How To Become Succes in Designing & Development?</a></h6>
-							</div>
-							<div id="collapseThree" aria-labelledby="headingFour" data-parent="#accordionExample" class="collapse">
-							<div class="card-body pl-3 pr-3">
-								<ul class="lectures_lists">
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 01</div>Web Designing Beginner</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 02</div>Startup Designing with HTML5 & CSS3</li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 03</div>How To Call Google Map iFrame</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 04</div>Create Drop Down Navigation Using CSS3</li>
-									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 05</div>How to Create Sticky Navigation Using JS</li>
-								</ul>
-							</div>
-							</div>
-						</div>
-
-					</div>
+					@include('app.course.curriculum')
 				</div>
 
 				<!-- Reviews -->

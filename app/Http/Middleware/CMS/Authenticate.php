@@ -45,6 +45,7 @@ class Authenticate extends BaseMiddleware
      */
     public function handle($request, Closure $next, $guard = null)
     {
+
         if (!empty ($_COOKIE['AccessToken'])) {
             setcookie("AccessToken", $_COOKIE['AccessToken'], time() + (6000 * 10), '/');
         }

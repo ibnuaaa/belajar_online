@@ -29,6 +29,12 @@ class HomeController extends Controller
 
     public function Index(Request $request)
     {
+
+
+        if (!empty($_COOKIE['AccessToken'])) {
+          header('Location: /home');
+          die();
+        }
         return $this->HomeBase($request);
     }
 
@@ -40,6 +46,10 @@ class HomeController extends Controller
 
     public function Signup(Request $request)
     {
+        if (!empty($_COOKIE['AccessToken'])) {
+          header('Location: /home');
+          die();
+        }
 
         return view('app.signup.index');
     }
@@ -56,16 +66,30 @@ class HomeController extends Controller
         return view('app.about_us.index');
     }
 
+    public function Courses(Request $request, $id)
+    {
+
+        return view('app.courses.index');
+    }
+
     public function Course(Request $request, $id)
     {
 
         return view('app.course.index');
     }
 
-    public function Lecture(Request $request)
+    public function Lecture(Request $request, $id)
     {
 
-        return view('app.lecture.index');
+        if ($id == 3 || $id == 4) {
+          return view('app.exercise.index', [
+            'id' => $id
+          ]);
+        } else {
+          return view('app.lecture.index', [
+            'id' => $id
+          ]);
+        }
     }
 
     public function Question(Request $request)

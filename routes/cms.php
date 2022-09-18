@@ -12,6 +12,7 @@ eze. Simply tell Lumen the URIs it should respond to
 |
 */
 $router->get('/home', 'CMS\Home\HomeController@Home');
+$router->get('/courses/category/{id}', 'CMS\Home\HomeController@Courses');
 $router->get('/course/{id}', 'CMS\Home\HomeController@Course');
 $router->get('/lecture/{id}', 'CMS\Home\HomeController@Lecture');
 $router->get('/question/{id}', 'CMS\Home\HomeController@Question');
