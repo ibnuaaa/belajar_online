@@ -21,4 +21,13 @@ class AuthenticationController extends Controller
         }
         return redirect()->route('login');
     }
+
+    public function Signout(Request $request)
+    {
+        if (isset($_COOKIE['AccessToken'])) {
+            unset($_COOKIE['AccessToken']);
+            setcookie('AccessToken', null, -1, '/');
+        }
+        return redirect('/');
+    }
 }

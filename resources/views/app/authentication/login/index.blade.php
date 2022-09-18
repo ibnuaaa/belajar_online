@@ -36,7 +36,7 @@
                     <form id="loginForm" class="p-t-15" role="form" style="opacity: 1 !important;">
                         <div class="form-group form-group-default login100-form">
                             <div class="controls">
-                                <input type="text" name="username" placeholder="Email / NIP" class="form-control">
+                                <input type="text" name="username" placeholder="Email" class="form-control">
                             </div>
                         </div>
                         <div class="form-group form-group-default">

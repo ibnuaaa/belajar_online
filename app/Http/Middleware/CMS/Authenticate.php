@@ -49,7 +49,7 @@ class Authenticate extends BaseMiddleware
             setcookie("AccessToken", $_COOKIE['AccessToken'], time() + (6000 * 10), '/');
         }
         if ($this->auth->guard($guard)->guest()) {
-            return redirect()->route('login');
+            return redirect()->route('signin');
         }
         $Me = (object)[ 'account' => $request->user(), 'type' => 'user'];
         $this->_Request->merge(['Me' => $Me]);

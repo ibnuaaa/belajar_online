@@ -19,6 +19,17 @@ $router->get('/login', ['as' => 'login', function () {
     return view('app.authentication.login.index');
 }, 'middleware' => ['AuthenticatePage']]);
 
+$router->get('/signin', ['as' => 'signin', function () {
+      return view('app.authentication.login_frontend.index');
+}, 'middleware' => ['AuthenticatePage']]);
+
+$router->get('/', 'CMS\Home\HomeController@Index');
+
+$router->get('/signup', 'CMS\Home\HomeController@Signup');
+
+$router->get('/contact', 'CMS\Home\HomeController@Contact');
+$router->get('/about_us', 'CMS\Home\HomeController@AboutUs');
+
 
 $router->get('/qrpdf/{id}', 'CMS\SuratMasuk\SuratMasukController@DownloadPdfFromQr');
 // $router->get('/captchaInfo', 'CMS\SuratMasuk\SuratMasukController@DownloadPdfFromQr');

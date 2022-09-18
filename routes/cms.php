@@ -11,11 +11,16 @@ eze. Simply tell Lumen the URIs it should respond to
 | and give it the Closure to call when that URI is requested.
 |
 */
+$router->get('/home', 'CMS\Home\HomeController@Home');
+$router->get('/course/{id}', 'CMS\Home\HomeController@Course');
+$router->get('/lecture/{id}', 'CMS\Home\HomeController@Lecture');
+$router->get('/question/{id}', 'CMS\Home\HomeController@Question');
+$router->get('/me', 'CMS\Home\HomeController@Profile');
+$router->get('/instructor/{id}', 'CMS\Home\HomeController@Profile');
+
 
 $router->get('/logout', 'CMS\Authentication\AuthenticationController@Logout');
-
-$router->get('/', 'CMS\Home\HomeController@Home');
-$router->get('/coupon/new', 'CMS\Home\HomeController@NewCoupon');
+$router->get('/signout', 'CMS\Authentication\AuthenticationController@Signout');
 
 $router->get('/position', 'CMS\Position\PositionController@HomeWithPaging');
 $router->get('/position/new/{position_id}', 'CMS\Position\PositionController@New');
@@ -95,23 +100,6 @@ $router->get('/jabatan_fungsional/{id}', 'CMS\JabatanFungsional\JabatanFungsiona
 $router->get('/indikator_skp/new/{tipe_indikator}/{indikator_kinerja_id}/{penilaian_prestasi_kerja_id}', 'CMS\IndikatorSkp\IndikatorSkpController@New');
 $router->get('/indikator_skp/edit/{id}/{penilaian_prestasi_kerja_id}', 'CMS\IndikatorSkp\IndikatorSkpController@Edit');
 $router->get('/indikator_skp/{id}', 'CMS\IndikatorSkp\IndikatorSkpController@Detail');
-
-$router->get('/penilaian_prestasi_kerja/id/{penilaian_prestasi_kerja_id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@IndikatorSkp');
-$router->get('/penilaian_prestasi_kerja', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Home');
-$router->get('/penilaian_prestasi_kerja/edit/{id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Edit');
-$router->get('/penilaian_prestasi_kerja/pdf/{id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Pdf');
-$router->get('/penilaian_prestasi_kerja/pdf_iku/{id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@PdfIku');
-$router->get('/penilaian_prestasi_kerja/{id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Detail');
-$router->get('/penilaian_prestasi_kerja/logbook/{id}', 'CMS\PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Logbook');
-
-$router->get('/penilaian_perilaku_kerja', 'CMS\PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Home');
-$router->get('/penilaian_perilaku_kerja/edit/{id}', 'CMS\PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Edit');
-$router->get('/penilaian_perilaku_kerja/{id}', 'CMS\PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Detail');
-
-$router->get('/indikator_tetap', 'CMS\IndikatorTetap\IndikatorTetapController@Home');
-$router->get('/indikator_tetap/new', 'CMS\IndikatorTetap\IndikatorTetapController@New');
-$router->get('/indikator_tetap/edit/{id}', 'CMS\IndikatorTetap\IndikatorTetapController@Edit');
-$router->get('/indikator_tetap/{id}', 'CMS\IndikatorTetap\IndikatorTetapController@Detail');
 
 $router->get('/user', 'CMS\User\UserController@Home');
 $router->get('/user/new', 'CMS\User\UserController@New');
