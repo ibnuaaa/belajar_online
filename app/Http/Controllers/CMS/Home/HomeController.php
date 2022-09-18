@@ -44,6 +44,12 @@ class HomeController extends Controller
         return view('app.home.index');
     }
 
+    public function Dashboard(Request $request)
+    {
+
+        return view('app.dashboard.index');
+    }
+
     public function Signup(Request $request)
     {
         if (!empty($_COOKIE['AccessToken'])) {

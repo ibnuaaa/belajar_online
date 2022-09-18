@@ -19,6 +19,8 @@ $router->get('/question/{id}', 'CMS\Home\HomeController@Question');
 $router->get('/me', 'CMS\Home\HomeController@Profile');
 $router->get('/instructor/{id}', 'CMS\Home\HomeController@Profile');
 
+$router->get('/dashboard', 'CMS\Home\HomeController@Dashboard');
+
 
 $router->get('/logout', 'CMS\Authentication\AuthenticationController@Logout');
 $router->get('/signout', 'CMS\Authentication\AuthenticationController@Signout');

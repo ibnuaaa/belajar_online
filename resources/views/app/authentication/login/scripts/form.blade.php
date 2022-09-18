@@ -65,7 +65,7 @@ $(document).ready(function() {
             const { oauth } = response.data.data
             document.cookie = `TokenType=${oauth.token_type}`
             document.cookie = `AccessToken=${oauth.access_token}`
-            window.location = `${window.appUrl}/`
+            window.location = `${window.appUrl}/dashboard`
         }).catch(() => {
             hideLoading();
         })

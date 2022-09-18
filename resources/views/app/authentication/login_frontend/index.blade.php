@@ -129,12 +129,12 @@
 										<form id="loginForm" class="p-t-15" role="form" style="opacity: 1 !important;">
 											<div class="form-group">
 												<label>Email Address*</label>
-												<input type="text" class="form-control" value="" name="username">
+												<input type="text" class="form-control" value="root" name="username">
 											</div>
 
 											<div class="form-group">
 												<label>Password*<a href="#" class="elio_right">Forget Password?</a></label>
-												<input type="password" class="form-control" value="" name="password">
+												<input type="password" class="form-control" value="Asdasd123!!" name="password">
 											</div>
 
 											<div class="form-group">
