@@ -80,7 +80,10 @@
           </ul>
 
           <br><br>
-          <a onclick="return jawab();" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
+          <a onclick="return jawab();" id="btn-jawab" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
+
+          <div id="pembahasan_soal">
+          </div>
 
         </div>
 

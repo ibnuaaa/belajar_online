@@ -214,6 +214,7 @@ class MiddlewareServiceProvider extends ServiceProvider
         'Lecture.Delete' => \App\Http\Middleware\Lecture\Delete::class,
 
         'Exercise.Insert' => \App\Http\Middleware\Exercise\Insert::class,
+        'Exercise.Answer' => \App\Http\Middleware\Exercise\Answer::class,
         'Exercise.Update' => \App\Http\Middleware\Exercise\Update::class,
         'Exercise.Delete' => \App\Http\Middleware\Exercise\Delete::class,
 

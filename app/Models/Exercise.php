@@ -18,9 +18,9 @@ class Exercise extends Model
         return $this->hasMany(ExerciseOption::class, 'exercise_id', 'id');
     }
 
-    // public function exercise_option2()
-    // {
-    //     return $this->hasMany(ExerciseOption::class, 'exercise_id', 'Exercise.id');
-    // }
+    public function lecture()
+    {
+        return $this->hasOne(Lecture::class, 'id', 'lecture_id');
+    }
 
 }

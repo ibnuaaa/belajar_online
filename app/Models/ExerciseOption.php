@@ -12,4 +12,10 @@ class ExerciseOption extends Model
 {
     use SoftDeletes;
     protected $table = 'exercise_options';
+
+    public function exercise()
+    {
+        return $this->hasOne(Exercise::class, 'id', 'exercise_id')->with('lecture');
+    }
+
 }
