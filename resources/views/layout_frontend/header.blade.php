@@ -104,9 +104,9 @@
 								</li>
 								<li class="login_click bg-red">
                   @if (empty(MyAccount()->id))
-                  <a href="/signin" >Sign in</a>
+                  <a href="/signin" >Masuk</a>
                   @else
-                  <a href="/signout">Logout</a>
+                  <a href="/signout">Keluar</a>
                   @endif
 								</li>
 							</ul>

@@ -81,7 +81,11 @@ class HomeController extends Controller
     public function Courses(Request $request, $id)
     {
 
-        return view('app.courses.index');
+        $Course = Course::all();
+        return view('app.courses.index',[
+          'course' => $Course
+        ]);
+
     }
 
     public function Course(Request $request, $id)

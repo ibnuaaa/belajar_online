@@ -11,11 +11,11 @@
 			<div class="col-lg-12 col-md-12">
 
 				<div class="breadcrumbs-wrap">
-					<h1 class="breadcrumb-title">Web Development</h1>
+					<h1 class="breadcrumb-title">Teknik Pengolahan Audio dan Video</h1>
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Web Development</li>
+							<li class="breadcrumb-item"><a href="#">Beranda</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Teknik Pengolahan Audio dan Video</li>
 						</ol>
 					</nav>
 				</div>
@@ -139,7 +139,7 @@
 				<!-- Row -->
 				<div class="row align-items-center mb-3">
 					<div class="col-lg-6 col-md-6 col-sm-12">
-						We found <strong>142</strong> courses for you
+						We found <strong>{{ count($course) }}</strong> courses for you
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12 ordering">
 
@@ -149,155 +149,33 @@
 
 				<div class="row">
 
+
+					@foreach ($course as $key => $val)
 					<!-- Cource Grid 1 -->
 					<div class="col-lg-4 col-md-6">
 						<div class="education_block_grid style_2">
-
 							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+								<a href="/f/course/{{ $val->id }}"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 								<div class="education_ratting"><i class="fa fa-star"></i>4.8 (70)</div>
 							</div>
-
 							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
+								<h4 class="bl-title"><a href="/f/course/{{ $val->id }}">{{ $val->name }}</a></h4>
 							</div>
-
 							<div class="cources_info_style3">
 								<ul>
-									<li><i class="ti-eye mr-2"></i>7482 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>63 Lectures</li>
-									<li><i class="ti-time mr-2"></i>6h 30min</li>
+									<li><i class="ti-eye mr-2"></i>Dilihat 32 Kali</li>
+									<li><i class="ti-control-skip-forward mr-2"></i>63 Sub Bab</li>
 								</ul>
 							</div>
-
-
 						</div>
 					</div>
-
-					<!-- Cource Grid 1 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="education_block_grid style_2">
-
-							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-2.jpg" class="img-fluid" alt=""></a>
-								<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
-							</div>
-
-							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
-							</div>
-
-							<div class="cources_info_style3">
-								<ul>
-									<li><i class="ti-eye mr-2"></i>10682 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>82 Lectures</li>
-									<li><i class="ti-time mr-2"></i>9h 45min</li>
-								</ul>
-							</div>
+					@endforeach
 
 
-						</div>
-					</div>
-
-					<!-- Cource Grid 1 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="education_block_grid style_2">
-
-							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-3.jpg" class="img-fluid" alt=""></a>
-								<div class="education_ratting"><i class="fa fa-star"></i>4.9 (29)</div>
-							</div>
-
-							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
-							</div>
-
-							<div class="cources_info_style3">
-								<ul>
-									<li><i class="ti-eye mr-2"></i>9882 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>47 Lectures</li>
-									<li><i class="ti-time mr-2"></i>6h 30min</li>
-								</ul>
-							</div>
 
 
-						</div>
-					</div>
-
-					<!-- Cource Grid 1 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="education_block_grid style_2">
-
-							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-4.jpg" class="img-fluid" alt=""></a>
-								<div class="education_ratting"><i class="fa fa-star"></i>4.7 (60)</div>
-							</div>
-
-							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">The Complete Financial Analyst Course 2020</a></h4>
-							</div>
-
-							<div class="cources_info_style3">
-								<ul>
-									<li><i class="ti-eye mr-2"></i>5882 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>52 Lectures</li>
-									<li><i class="ti-time mr-2"></i>5h 15min</li>
-								</ul>
-							</div>
 
 
-						</div>
-					</div>
-
-					<!-- Cource Grid 1 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="education_block_grid style_2">
-
-							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-5.jpg" class="img-fluid" alt=""></a>
-								<div class="education_ratting"><i class="fa fa-star"></i>4.8 (45)</div>
-							</div>
-
-							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
-							</div>
-
-							<div class="cources_info_style3">
-								<ul>
-									<li><i class="ti-eye mr-2"></i>4732 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>32 Lectures</li>
-									<li><i class="ti-time mr-2"></i>3h 30min</li>
-								</ul>
-							</div>
-
-
-						</div>
-					</div>
-
-					<!-- Cource Grid 1 -->
-					<div class="col-lg-4 col-md-6">
-						<div class="education_block_grid style_2">
-
-							<div class="education_block_thumb">
-								<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
-								<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
-							</div>
-
-							<div class="education_block_body">
-								<h4 class="bl-title"><a href="/f/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
-							</div>
-
-							<div class="cources_info_style3">
-								<ul>
-									<li><i class="ti-eye mr-2"></i>7582 Views</li>
-									<li><i class="ti-control-skip-forward mr-2"></i>62 Lectures</li>
-									<li><i class="ti-time mr-2"></i>3h 10min</li>
-								</ul>
-							</div>
-
-
-						</div>
-					</div>
 
 				</div>
 

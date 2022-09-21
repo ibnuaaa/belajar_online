@@ -5,7 +5,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <title>LearnUp - Online Course & Education HTML Template</title>
+        <title>LearnUp - Belajar Kapanpun dan Dimanapun</title>
 
         <!-- Custom CSS -->
         <link href="/frontend/assets/css/styles.css" rel="stylesheet">
@@ -44,10 +44,10 @@
 												<div class="_loh_r96">
 													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
 													<div class="_loh_r92">
-														<h4>Good Services</h4>
+														<h4>Cara mengajar yang baik</h4>
 													</div>
 													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+														<p>Modul yang disajikan lengkap. Dapat dibuka kapan saja dan dimana saja</p>
 													</div>
 													<div class="_loh_foot_r93">
 														<h4>Shilpa D. Setty</h4>
@@ -59,10 +59,10 @@
 												<div class="_loh_r96">
 													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
 													<div class="_loh_r92">
-														<h4>Good Services</h4>
+														<h4>Teknologi Terkini</h4>
 													</div>
 													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+														<p>Pengetahuan saya menjadi lebih berwawasan setelah belajar menggunakan website ini.</p>
 													</div>
 													<div class="_loh_foot_r93">
 														<h4>Adam Wilsom</h4>
@@ -74,10 +74,10 @@
 												<div class="_loh_r96">
 													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
 													<div class="_loh_r92">
-														<h4>Customer Support</h4>
+														<h4>Struktur yang rapi</h4>
 													</div>
 													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+														<p>metode pembelajaran yang sangat nyaman dan dapat diikuti oleh siswa.</p>
 													</div>
 													<div class="_loh_foot_r93">
 														<h4>Kunal M. Wilsom</h4>
@@ -85,34 +85,6 @@
 													</div>
 												</div>
 
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Ultimate Services</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-													</div>
-													<div class="_loh_foot_r93">
-														<h4>Mark Jugermark</h4>
-														<span>MCL Founder</span>
-													</div>
-												</div>
-												<!-- Single Reviews -->
-												<div class="_loh_r96">
-													<div class="_bloi_quote"><i class="fa fa-quote-left"></i></div>
-													<div class="_loh_r92">
-														<h4>Item Support</h4>
-													</div>
-													<div class="_loh_r93">
-														<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-													</div>
-													<div class="_loh_foot_r93">
-														<h4>Kirti Washinton</h4>
-														<span>Web Designer</span>
-													</div>
-												</div>
 
 											</div>
 										</div>
@@ -123,28 +95,25 @@
 									<div class="log_wraps">
 										<a href="/" class="log-logo_head"><img src="/frontend/assets/img/logo.png" class="img-fluid" width="80" alt="" /></a>
 										<div class="log__heads">
-											<h4 class="mt-0 logs_title">Sign <span class="theme-cl">In</span></h4>
+											<h4 class="mt-0 logs_title">Masuk <span class="theme-cl">Situs</span></h4>
 										</div>
 
 										<form id="loginForm" class="p-t-15" role="form" style="opacity: 1 !important;">
 											<div class="form-group">
-												<label>Email Address*</label>
+												<label>Alamat Email / Username*</label>
 												<input type="text" class="form-control" value="root" name="username">
 											</div>
 
 											<div class="form-group">
-												<label>Password*<a href="#" class="elio_right">Forget Password?</a></label>
+												<label>Kata Sandi*<a href="#" class="elio_right">Lupa Password?</a></label>
 												<input type="password" class="form-control" value="Asdasd123!!" name="password">
 											</div>
 
 											<div class="form-group">
-												<a href="#" onclick="return login();" class="btn btn_apply w-100">Sign In</a>
+												<a href="#" onclick="return login();" class="btn btn_apply w-100">Masuk</a>
 											</div>
 										</form>
 
-										<div class="form-group text-center mb-0 mt-3">
-											You Have't Any Account? <a href="/signup" class="theme-cl">SignUp</a>
-										</div>
 
 									</div>
 								</div>

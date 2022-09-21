@@ -65,7 +65,7 @@
 								<div class="education_block_footer">
 									<div class="education_block_author">
 										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="#">Shaurya Preet</a></h5>
+										<h5><a href="#">Muktiari Ayu Winasis</a></h5>
 									</div>
 									<span class="education_block_time"><i class="ti-calendar mr-1"></i>1 hour ago</span>
 								</div>
