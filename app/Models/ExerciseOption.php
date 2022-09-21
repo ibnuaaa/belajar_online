@@ -11,5 +11,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ExerciseOption extends Model
 {
     use SoftDeletes;
-    protected $table = 'exercise_option';
+    protected $table = 'exercise_options';
 }

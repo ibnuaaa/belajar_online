@@ -53,7 +53,7 @@ $router->delete($prefix.'/unit_kerja/{id}', ['uses' => 'UnitKerja\UnitKerjaContr
 $router->post($prefix.'/upload', ['uses' => 'File\FileController@Upload', 'middleware' => ['LogActivity:File.Upload','File.Upload']]);
 
 $router->post($prefix.'/storage/save', ['uses' => 'Storage\StorageController@Save', 'middleware' => ['LogActivity:Storage.Save','Storage.Save']]);
-$router->post($prefix.'/storage/save_excel', ['uses' => 'Storage\StorageController@SaveExcel', 'middleware' => ['LogActivity:Storage.SaveExcel','Storage.SaveExcel']]);
+$router->post($prefix.'/storage/save_exel', ['uses' => 'Storage\StorageController@SaveExel', 'middleware' => ['LogActivity:Storage.SaveExel','Storage.SaveExel']]);
 $router->delete($prefix.'/storage/delete_by_key/{uuid}', ['uses' => 'Storage\StorageController@DeleteByKey', 'middleware' => ['LogActivity:Storage.DeleteByKey','Storage.DeleteByKey']]);
 
 // mail
@@ -100,37 +100,37 @@ $router->post($prefix.'/lecture', ['uses' => 'Lecture\LectureController@Insert',
 $router->put($prefix.'/lecture/{id}', ['uses' => 'Lecture\LectureController@Update', 'middleware' => ['LogActivity:Lecture.Update','Lecture.Update']]);
 $router->delete($prefix.'/lecture/{id}', ['uses' => 'Lecture\LectureController@Delete', 'middleware' => ['LogActivity:Lecture.Delete','Lecture.Delete']]);
 
-// excercise
-$router->get($prefix.'/excercise', ['uses' => 'Excercise\ExcerciseBrowseController@get', 'middleware' => ['LogActivity:Excercise.View','ArrQuery']]);
-$router->get($prefix.'/excercise/{query:.+}', ['uses' => 'Excercise\ExcerciseBrowseController@get', 'middleware' => ['Excercise:Excercise.View','ArrQuery']]);
-$router->post($prefix.'/excercise', ['uses' => 'Excercise\ExcerciseController@Insert', 'middleware' => ['LogActivity:Excercise.Insert','Excercise.Insert']]);
-$router->put($prefix.'/excercise/{id}', ['uses' => 'Excercise\ExcerciseController@Update', 'middleware' => ['LogActivity:Excercise.Update','Excercise.Update']]);
-$router->delete($prefix.'/excercise/{id}', ['uses' => 'Excercise\ExcerciseController@Delete', 'middleware' => ['LogActivity:Excercise.Delete','Excercise.Delete']]);
+// exercise
+$router->get($prefix.'/exercise', ['uses' => 'Exercise\ExerciseBrowseController@get', 'middleware' => ['LogActivity:Exercise.View','ArrQuery']]);
+$router->get($prefix.'/exercise/{query:.+}', ['uses' => 'Exercise\ExerciseBrowseController@get', 'middleware' => ['Exercise:Exercise.View','ArrQuery']]);
+$router->post($prefix.'/exercise', ['uses' => 'Exercise\ExerciseController@Insert', 'middleware' => ['LogActivity:Exercise.Insert','Exercise.Insert']]);
+$router->put($prefix.'/exercise/{id}', ['uses' => 'Exercise\ExerciseController@Update', 'middleware' => ['LogActivity:Exercise.Update','Exercise.Update']]);
+$router->delete($prefix.'/exercise/{id}', ['uses' => 'Exercise\ExerciseController@Delete', 'middleware' => ['LogActivity:Exercise.Delete','Exercise.Delete']]);
 
-// excercise_type
-$router->get($prefix.'/excercise_type', ['uses' => 'ExcerciseType\ExcerciseTypeBrowseController@get', 'middleware' => ['LogActivity:ExcerciseType.View','ArrQuery']]);
-$router->get($prefix.'/excercise_type/{query:.+}', ['uses' => 'ExcerciseType\ExcerciseTypeBrowseController@get', 'middleware' => ['ExcerciseType:ExcerciseType.View','ArrQuery']]);
-$router->post($prefix.'/excercise_type', ['uses' => 'ExcerciseType\ExcerciseTypeController@Insert', 'middleware' => ['LogActivity:ExcerciseType.Insert','ExcerciseType.Insert']]);
-$router->put($prefix.'/excercise_type/{id}', ['uses' => 'ExcerciseType\ExcerciseTypeController@Update', 'middleware' => ['LogActivity:ExcerciseType.Update','ExcerciseType.Update']]);
-$router->delete($prefix.'/excercise_type/{id}', ['uses' => 'ExcerciseType\ExcerciseTypeController@Delete', 'middleware' => ['LogActivity:ExcerciseType.Delete','ExcerciseType.Delete']]);
+// exercise_type
+$router->get($prefix.'/exercise_type', ['uses' => 'ExerciseType\ExerciseTypeBrowseController@get', 'middleware' => ['LogActivity:ExerciseType.View','ArrQuery']]);
+$router->get($prefix.'/exercise_type/{query:.+}', ['uses' => 'ExerciseType\ExerciseTypeBrowseController@get', 'middleware' => ['ExerciseType:ExerciseType.View','ArrQuery']]);
+$router->post($prefix.'/exercise_type', ['uses' => 'ExerciseType\ExerciseTypeController@Insert', 'middleware' => ['LogActivity:ExerciseType.Insert','ExerciseType.Insert']]);
+$router->put($prefix.'/exercise_type/{id}', ['uses' => 'ExerciseType\ExerciseTypeController@Update', 'middleware' => ['LogActivity:ExerciseType.Update','ExerciseType.Update']]);
+$router->delete($prefix.'/exercise_type/{id}', ['uses' => 'ExerciseType\ExerciseTypeController@Delete', 'middleware' => ['LogActivity:ExerciseType.Delete','ExerciseType.Delete']]);
 
-// excercise_options
-$router->get($prefix.'/excercise_options', ['uses' => 'ExcerciseOptions\ExcerciseOptionsBrowseController@get', 'middleware' => ['LogActivity:ExcerciseOptions.View','ArrQuery']]);
-$router->get($prefix.'/excercise_options/{query:.+}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsBrowseController@get', 'middleware' => ['ExcerciseOptions:ExcerciseOptions.View','ArrQuery']]);
-$router->post($prefix.'/excercise_options', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Insert', 'middleware' => ['LogActivity:ExcerciseOptions.Insert','ExcerciseOptions.Insert']]);
-$router->put($prefix.'/excercise_options/{id}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Update', 'middleware' => ['LogActivity:ExcerciseOptions.Update','ExcerciseOptions.Update']]);
-$router->delete($prefix.'/excercise_options/{id}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Delete', 'middleware' => ['LogActivity:ExcerciseOptions.Delete','ExcerciseOptions.Delete']]);
+// exercise_option
+$router->get($prefix.'/exercise_option', ['uses' => 'ExerciseOption\ExerciseOptionBrowseController@get', 'middleware' => ['LogActivity:ExerciseOption.View','ArrQuery']]);
+$router->get($prefix.'/exercise_option/{query:.+}', ['uses' => 'ExerciseOption\ExerciseOptionBrowseController@get', 'middleware' => ['ExerciseOption:ExerciseOption.View','ArrQuery']]);
+$router->post($prefix.'/exercise_option', ['uses' => 'ExerciseOption\ExerciseOptionController@Insert', 'middleware' => ['LogActivity:ExerciseOption.Insert','ExerciseOption.Insert']]);
+$router->put($prefix.'/exercise_option/{id}', ['uses' => 'ExerciseOption\ExerciseOptionController@Update', 'middleware' => ['LogActivity:ExerciseOption.Update','ExerciseOption.Update']]);
+$router->delete($prefix.'/exercise_option/{id}', ['uses' => 'ExerciseOption\ExerciseOptionController@Delete', 'middleware' => ['LogActivity:ExerciseOption.Delete','ExerciseOption.Delete']]);
 
-// user_excercise
-$router->get($prefix.'/user_excercise', ['uses' => 'UserExcercise\UserExcerciseBrowseController@get', 'middleware' => ['LogActivity:UserExcercise.View','ArrQuery']]);
-$router->get($prefix.'/user_excercise/{query:.+}', ['uses' => 'UserExcercise\UserExcerciseBrowseController@get', 'middleware' => ['UserExcercise:UserExcercise.View','ArrQuery']]);
-$router->post($prefix.'/user_excercise', ['uses' => 'UserExcercise\UserExcerciseController@Insert', 'middleware' => ['LogActivity:UserExcercise.Insert','UserExcercise.Insert']]);
-$router->put($prefix.'/user_excercise/{id}', ['uses' => 'UserExcercise\UserExcerciseController@Update', 'middleware' => ['LogActivity:UserExcercise.Update','UserExcercise.Update']]);
-$router->delete($prefix.'/user_excercise/{id}', ['uses' => 'UserExcercise\UserExcerciseController@Delete', 'middleware' => ['LogActivity:UserExcercise.Delete','UserExcercise.Delete']]);
+// user_exercise
+$router->get($prefix.'/user_exercise', ['uses' => 'UserExercise\UserExerciseBrowseController@get', 'middleware' => ['LogActivity:UserExercise.View','ArrQuery']]);
+$router->get($prefix.'/user_exercise/{query:.+}', ['uses' => 'UserExercise\UserExerciseBrowseController@get', 'middleware' => ['UserExercise:UserExercise.View','ArrQuery']]);
+$router->post($prefix.'/user_exercise', ['uses' => 'UserExercise\UserExerciseController@Insert', 'middleware' => ['LogActivity:UserExercise.Insert','UserExercise.Insert']]);
+$router->put($prefix.'/user_exercise/{id}', ['uses' => 'UserExercise\UserExerciseController@Update', 'middleware' => ['LogActivity:UserExercise.Update','UserExercise.Update']]);
+$router->delete($prefix.'/user_exercise/{id}', ['uses' => 'UserExercise\UserExerciseController@Delete', 'middleware' => ['LogActivity:UserExercise.Delete','UserExercise.Delete']]);
 
-// user_excercise_answer
-$router->get($prefix.'/user_excercise_answer', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerBrowseController@get', 'middleware' => ['LogActivity:UserExcerciseAnswer.View','ArrQuery']]);
-$router->get($prefix.'/user_excercise_answer/{query:.+}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerBrowseController@get', 'middleware' => ['UserExcerciseAnswer:UserExcerciseAnswer.View','ArrQuery']]);
-$router->post($prefix.'/user_excercise_answer', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Insert', 'middleware' => ['LogActivity:UserExcerciseAnswer.Insert','UserExcerciseAnswer.Insert']]);
-$router->put($prefix.'/user_excercise_answer/{id}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Update', 'middleware' => ['LogActivity:UserExcerciseAnswer.Update','UserExcerciseAnswer.Update']]);
-$router->delete($prefix.'/user_excercise_answer/{id}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Delete', 'middleware' => ['LogActivity:UserExcerciseAnswer.Delete','UserExcerciseAnswer.Delete']]);
+// user_exercise_answer
+$router->get($prefix.'/user_exercise_answer', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerBrowseController@get', 'middleware' => ['LogActivity:UserExerciseAnswer.View','ArrQuery']]);
+$router->get($prefix.'/user_exercise_answer/{query:.+}', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerBrowseController@get', 'middleware' => ['UserExerciseAnswer:UserExerciseAnswer.View','ArrQuery']]);
+$router->post($prefix.'/user_exercise_answer', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Insert', 'middleware' => ['LogActivity:UserExerciseAnswer.Insert','UserExerciseAnswer.Insert']]);
+$router->put($prefix.'/user_exercise_answer/{id}', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Update', 'middleware' => ['LogActivity:UserExerciseAnswer.Update','UserExerciseAnswer.Update']]);
+$router->delete($prefix.'/user_exercise_answer/{id}', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Delete', 'middleware' => ['LogActivity:UserExerciseAnswer.Delete','UserExerciseAnswer.Delete']]);

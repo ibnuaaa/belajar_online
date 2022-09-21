@@ -109,11 +109,11 @@ class CourseController extends Controller
         ]);
     }
 
-    public function Lecture(Request $request, $id)
+    public function Lecture(Request $request, $id){
 
-        $Lecture = Section::where('course_id', $id)
-                ->with('lecture')
-                ->get();
+        $Lecture = Lecture::where('section_id', $id)
+                ->with('exercise')
+                ->first();
 
         return view('app.cms.course.lecture.index', [
           'id' => $id,

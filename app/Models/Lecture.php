@@ -12,4 +12,10 @@ class Lecture extends Model
 {
     use SoftDeletes;
     protected $table = 'lecture';
+
+    public function exercise()
+    {
+        return $this->hasMany(Exercise::class, 'lecture_id', 'id')->with('exercise_option');
+    }
+
 }
