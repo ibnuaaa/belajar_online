@@ -83,7 +83,7 @@
                                 </td>
 
                                 <td>
-                                    
+
                                 </td>
                             </tr>
                             @endforeach

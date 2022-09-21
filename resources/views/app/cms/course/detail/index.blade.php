@@ -55,7 +55,7 @@
                                 Aksi
                               </td>
                           </tr>
-                          <tr>
+                          <tr style="display:none;">
                               <td colspan="3" style="text-align:center;">
                                   <div class="input-group">
                                     <input type="text" placeholder="Type a new section..." name="section_name" class="form-control"><br>
@@ -69,7 +69,7 @@
                                 {{ $key+1 }}
                               </td>
                               <td>
-                                  <input type="text" placeholder="Type a section..." value="{{ $val->name }}" class="form-control">
+                                  <input type="text" placeholder="Type a section..." onchange="saveEditSection({{ $val->id }},this);" value="{{ $val->name }}" class="form-control">
                                   <br>
                                   <table class="table table-bordered table-sm">
                                       <tr>
@@ -81,15 +81,15 @@
                                           <td style="width:10%;">
                                               No
                                           </td>
-                                          <td style="width:80%;">
+                                          <td style="width:85%;">
                                               Name
                                           </td>
-                                          <td style="width:10%;">
+                                          <td style="width:5%;">
                                               Action
                                           </td>
                                       </tr>
 
-                                      <tr>
+                                      <tr style="display:none;">
                                           <td colspan="3" style="text-align:center;">
                                               <div class="input-group">
                                                 <input type="text" placeholder="Type a new section..." name="lecture_name" class="form-control"><br>
@@ -104,11 +104,11 @@
                                               {{ $key2+1 }}
                                           </td>
                                           <td>
-                                              {{$val2->name}}
+                                              <input name="name" type="text" class="form-control" value="{{ $val2->name }}" onchange="saveEditLecture({{ $val2->id }}, this);" >
                                           </td>
                                           <td>
                                               <div class="btn-group">
-                                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteLecture('{{$val2->id}}')"><i class="fa fa-trash"></i></a>
+                                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteLecture('{{$val2->id}}');"><i class="fa fa-trash"></i></a>
                                                   <a href="/course/lecture/{{ $val2->id }}" class="btn btn-success btn-sm" ><i class="fa fa-edit"></i></a>
                                               </div>
                                           </td>
@@ -116,16 +116,22 @@
                                       @endforeach
 
 
+                                      <tr>
+                                          <td colspan="3">
+                                              <a href="#" class="btn btn-success btn-sm" onclick="return saveNewLecture('{{$val->id}}')"><i class="fa fa-plus"></i> Buat Lecture baru</a>
+                                          </td>
+                                      </tr>
+
                                   </table>
                               </td>
                               <td>
-                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteSection('{{$val->id}}')"><i class="fa fa-trash"></i></a>
+                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteSection('{{$val->id}}');"><i class="fa fa-trash"></i></a>
                               </td>
                           </tr>
                           @endforeach
                           <tr>
                               <td colspan="3">
-                                <a href="#" class="btn btn-primary btn-sm" onclick="return newSection()"><i class="fa fa-plus"></i> Buat Section Baru</a>
+                                <a href="#" class="btn btn-primary btn-sm" onclick="return saveNewSection()"><i class="fa fa-plus"></i> Buat Section Baru</a>
                               </td>
                           </tr>
                         </table>

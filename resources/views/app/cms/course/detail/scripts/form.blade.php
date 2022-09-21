@@ -4,7 +4,6 @@
 function saveNewSection() {
 
   var data = {
-    name: $('input[name=section_name]').val(),
     course_id: {{ $id }}
   }
 
@@ -19,10 +18,36 @@ function saveNewSection() {
   return false;
 }
 
+
+function saveEditSection(id, e) {
+
+  var data = {
+    name: $(e).val()
+  }
+
+  $(e).addClass('loadingField')
+  axios.put('/section/' + id, data).then((response) => {
+      // location.reload()
+      $(e).removeClass('loadingField')
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
+}
+
+
+
+
+
+
+
+
 function saveNewLecture(id) {
 
   var data = {
-    name: $('input[name=lecture_name]').val(),
     section_id: id
   }
 
@@ -37,6 +62,47 @@ function saveNewLecture(id) {
   return false;
 }
 
+function saveEditLecture(id, e) {
 
+  var data = {
+    name: $(e).val()
+  }
+
+  $(e).addClass('loadingField')
+  axios.put('/lecture/' + id, data).then((response) => {
+      // location.reload()
+      $(e).removeClass('loadingField')
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
+}
+
+function deleteLecture(id) {
+  axios.delete('/lecture/' + id).then((response) => {
+      location.reload()
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
+}
+
+function deleteSection(id) {
+  axios.delete('/section/' + id).then((response) => {
+      location.reload()
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
+}
 
 </script>
