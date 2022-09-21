@@ -29,7 +29,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-2">
-                      <input type="file" onchange="prepareUpload(this, 'gallery', '0', false, ['jpg','png','bmp']);" multiple>
+                      <input type="file" onchange="prepareUpload(this, 'gallery', '0', false, ['jpg','png','bmp','jpeg']);" multiple>
                       <br><br><br>
                       @foreach ($data as $key => $val2)
                       <img src="http://{{getConfig('basepath')}}/api/preview/{{$val2->storage->key}}" style="float:left;width:50px;">
