@@ -20,13 +20,13 @@ class Insert extends BaseMiddleware
 
     private function Validation()
     {
-        $validator = Validator::make($this->_Request->all(), [
-            'name' => 'required'
-        ]);
-        if ($validator->fails()) {
-            $this->Json::set('errors', $validator->errors());
-            return false;
-        }
+        // $validator = Validator::make($this->_Request->all(), [
+        //     'name' => 'required'
+        // ]);
+        // if ($validator->fails()) {
+        //     $this->Json::set('errors', $validator->errors());
+        //     return false;
+        // }
         return true;
     }
 
