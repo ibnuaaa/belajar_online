@@ -49,25 +49,27 @@
                     </div>
                     <div class="col-6 col-md-10">
                         <input type="file" onchange="prepareUpload(this, 'lecture', '{{ $lecture->id }}', false, ['pdf']);" multiple>
-
-
                         @if (!empty($lecture->foto_lecture))
-
                         <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
-
                         @endif
-
                     </div>
                 </div>
 
-                
+
 
                 <div class="row mt-4">
                     <div class="col-6 col-md-2">
                         Video
                     </div>
                     <div class="col-6 col-md-10">
-                        <input name="video" type="text" class="form-control" value="{{ $lecture->video }}" onchange="saveEditLecture(this);">
+                        <input type="file" onchange="prepareUpload(this, 'video', '{{ $lecture->id }}', false, ['mkv','flv','mp4','mov','avi']);" multiple>
+                        <br><br>
+                        @if (!empty($lecture->foto_video))
+                            <video width="100%" height="440" controls style="background:black;">
+                              <source src="http://{{ getConfig('basepath') }}/api/preview/{{$lecture->foto_video->storage->key}}" type="video/mp4">
+                              Your browser does not support the video tag.
+                            </video>
+                        @endif
                     </div>
                 </div>
                 <div class="row mt-4">

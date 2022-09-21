@@ -76,15 +76,19 @@
 
           {!!$lecture->description!!}
 
-          <br><br>
+
 
           @if (!empty($lecture->foto_lecture))
-
+          <br><br>
           <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
-
           @endif
 
-
+          @if (!empty($lecture->foto_video))
+              <video width="100%" height="440" controls style="background:black;">
+                <source src="http://{{ getConfig('basepath') }}/api/preview/{{$lecture->foto_video->storage->key}}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+          @endif
 
         </div>
 

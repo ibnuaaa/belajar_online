@@ -30,4 +30,11 @@ class Lecture extends Model
                     ->with('storage');
     }
 
+    public function foto_video()
+    {
+        return $this->hasOne(Document::class, 'object_id', 'id')
+                    ->where('object', 'video')
+                    ->with('storage');
+    }
+
 }
