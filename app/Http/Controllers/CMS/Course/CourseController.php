@@ -111,7 +111,7 @@ class CourseController extends Controller
 
     public function Lecture(Request $request, $id){
 
-        $Lecture = Lecture::where('section_id', $id)
+        $Lecture = Lecture::where('id', $id)
                 ->with('exercise')
                 ->first();
 
