@@ -81,9 +81,9 @@
         $(document).ready(function() {
 
 
-            if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
-              // timerSession()
-            }
+            // if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
+            //   // timerSession()
+            // }
 
             $('body input').on('keyup', function() {
                   g_timeout = parseInt({{getConfig('session_timeout')}});
@@ -223,14 +223,14 @@
         $(document).ready(function() {
             // $.fn.datepicker.defaults.format = 'yyyy-mm-dd'
 
-            if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
-            }
+            // if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
+            // }
 
             // reloadNotification();
 
-            if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
-                $('#token').html(getCookie('AccessToken'));
-            }
+            // if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
+            //     $('#token').html(getCookie('AccessToken'));
+            // }
 
         })
 

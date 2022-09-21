@@ -48,6 +48,10 @@ class ExerciseBrowseController extends Controller
                 $query->where("$this->ExerciseTable.id", $request->ArrQuery->id);
             }
 
+            if (isset($request->ArrQuery->lecture_id)) {
+                $query->where("$this->ExerciseTable.lecture_id", $request->ArrQuery->lecture_id);
+            }
+
             if (!empty($request->get('q'))) {
                 $query->where(function ($query) use($request) {
                     $query->where("$this->ExerciseTable.name", 'like', '%'.$request->get('name').'%');
@@ -66,22 +70,14 @@ class ExerciseBrowseController extends Controller
                 }
             }
         })
-        ->select(
-            // Exercise
-            "$this->ExerciseTable.id as Exercise.id",
-            "$this->ExerciseTable.name as Exercise.name",
-            "$this->ExerciseTable.created_at as Exercise.created_at"
-        );
+        ->with('exercise_option');
 
-        if(!empty($request->get('sort'))) {
-            if(!empty($request->get('sort_type'))) {
-              if ($request->get('sort') == 'name') $Exercise->orderBy("$this->ExerciseTable.name", $request->get('sort_type'));
-              if ($request->get('sort') == 'created_at') $Exercise->orderBy("$this->ExerciseTable.created_at", $request->get('sort_type'));
-            } else {
-              $Exercise->orderBy("$this->ExerciseTable.created_at", 'desc');
-            }
-        } else {
-            $Exercise->orderBy("$this->ExerciseTable.created_at", 'desc');
+        if (!empty($request->ArrQuery->number)) {
+            $Exercise = $Exercise->orderBy('id', 'ASC');
+            $request->ArrQuery->take = 1;
+            $request->ArrQuery->set = 'first';
+            if ($request->ArrQuery->number < 1) $request->ArrQuery->skip = 0;
+            else $request->ArrQuery->skip = $request->ArrQuery->number - 1;
         }
 
 

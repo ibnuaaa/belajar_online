@@ -55,9 +55,11 @@ function saveNewExercise(id) {
 
 function saveEditExcercise(id, e) {
 
-  var data = {
-    name: $(e).val()
-  }
+  var field = $(e).attr('name')
+  
+  var data = new Object;
+  data[field] = $(e).val();
+
 
   $(e).addClass('loadingField')
   axios.put('/exercise/' + id, data).then((response) => {

@@ -53,30 +53,14 @@
           </div>
         </div>
 
-        @if ($id == 2123123)
-        <div class="property_video xl mb-4">
-          <div class="thumb">
-            <img class="pro_img img-fluid w100" src="https://via.placeholder.com/1200x900" alt="7.jpg">
-            <div class="overlay_icon">
-              <div class="bb-video-box">
-                <div class="bb-video-box-inner">
-                  <div class="bb-video-box-innerup">
-                    <a href="https://www.youtube.com/watch?v=A8EI6JaFbv4" data-toggle="modal" data-target="#popup-video" class="theme-cl"><i class="ti-control-play"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        @endif
 
 
         <!-- Overview -->
         <div class="edu_wraper border">
 
+          @if (!empty($lecture->description))
           {!!$lecture->description!!}
-
-
+          @endif
 
           @if (!empty($lecture->foto_lecture))
           <br><br>
@@ -89,6 +73,14 @@
                 Your browser does not support the video tag.
               </video>
           @endif
+
+
+          <div id="soal"></div>
+          <ul class="no-ul-list" id="pilihan">
+          </ul>
+
+          <br><br>
+          <a onclick="return jawab();" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
 
         </div>
 

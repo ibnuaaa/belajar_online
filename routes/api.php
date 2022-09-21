@@ -102,7 +102,7 @@ $router->delete($prefix.'/lecture/{id}', ['uses' => 'Lecture\LectureController@D
 
 // exercise
 $router->get($prefix.'/exercise', ['uses' => 'Exercise\ExerciseBrowseController@get', 'middleware' => ['LogActivity:Exercise.View','ArrQuery']]);
-$router->get($prefix.'/exercise/{query:.+}', ['uses' => 'Exercise\ExerciseBrowseController@get', 'middleware' => ['Exercise:Exercise.View','ArrQuery']]);
+$router->get($prefix.'/exercise/{query:.+}', ['uses' => 'Exercise\ExerciseBrowseController@get', 'middleware' => ['ArrQuery']]);
 $router->post($prefix.'/exercise', ['uses' => 'Exercise\ExerciseController@Insert', 'middleware' => ['LogActivity:Exercise.Insert','Exercise.Insert']]);
 $router->put($prefix.'/exercise/{id}', ['uses' => 'Exercise\ExerciseController@Update', 'middleware' => ['LogActivity:Exercise.Update','Exercise.Update']]);
 $router->delete($prefix.'/exercise/{id}', ['uses' => 'Exercise\ExerciseController@Delete', 'middleware' => ['LogActivity:Exercise.Delete','Exercise.Delete']]);

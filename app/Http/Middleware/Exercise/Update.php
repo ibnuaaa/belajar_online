@@ -16,7 +16,8 @@ class Update extends BaseMiddleware
     {
         $this->Model->Exercise = Exercise::where('id', $this->Id)->first();
         if ($this->Model->Exercise) {
-            $this->Model->Exercise->name = $this->_Request->input('name');
+          if(!empty($this->_Request->input('name'))) $this->Model->Exercise->name = $this->_Request->input('name');
+          if(!empty($this->_Request->input('description'))) $this->Model->Exercise->decription = $this->_Request->input('description');
         }
     }
 

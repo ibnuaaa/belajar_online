@@ -85,6 +85,11 @@
                                     Soal :
                                     <textarea name="name" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise({{$value->id}}, this);">{{ $value->name }}</textarea>
                                     <br>
+                                    <br>
+                                    Pembahasan :
+                                    <textarea name="description" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise({{$value->id}}, this);">{{ $value->decription }}</textarea>
+                                    <br>
+                                    <br>
                                     Pilihan
                                     <table class="table table-bordered table-sm">
                                         @foreach ($value->exercise_option as $key2 => $value2)
