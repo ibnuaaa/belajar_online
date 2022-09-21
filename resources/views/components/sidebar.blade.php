@@ -22,6 +22,14 @@
                             <a class="side-menu__item" data-bs-toggle="slide" href="{!! url('/'); !!}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Dashboard</span></a>
                         </li>
 
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="{!! url('/category'); !!}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Category</span></a>
+                        </li>
+
+                        <li class="slide">
+                            <a class="side-menu__item" data-bs-toggle="slide" href="{!! url('/course'); !!}"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Course</span></a>
+                        </li>
+
 
                         @if (getPermissions('modul_pengguna')['checked'])
                         <li class="sub-category">

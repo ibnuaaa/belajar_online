@@ -51,11 +51,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -94,11 +94,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-2.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-2.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -137,11 +137,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-3.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-3.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -180,11 +180,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-4.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-4.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">The Complete Financial Analyst Course 2020</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">The Complete Financial Analyst Course 2020</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -223,11 +223,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-5.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-5.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -266,11 +266,11 @@
 							<div class="education_block_grid style_2">
 
 								<div class="education_block_thumb n-shadow">
-									<a href="/course/1"><img src="/frontend/assets/img/co-6.jpg" class="img-fluid" alt=""></a>
+									<a href="/f/course/1"><img src="/frontend/assets/img/co-6.jpg" class="img-fluid" alt=""></a>
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
+									<h4 class="bl-title"><a href="/f/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
 								</div>
 
 								<div class="cources_facts">
@@ -500,12 +500,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
 										</div>
 
 										<div class="cources_info_style3">
@@ -532,12 +532,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.9 (29)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
 										</div>
 
 										<div class="cources_info_style3">
@@ -564,12 +564,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (60)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">The Complete Financial Analyst Course 2020</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">The Complete Financial Analyst Course 2020</a></h4>
 										</div>
 
 										<div class="cources_info_style3">
@@ -596,12 +596,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.8 (45)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
 										</div>
 
 										<div class="cources_info_style3">
@@ -628,12 +628,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.7 (40)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
 										</div>
 
 										<div class="cources_info_style3">
@@ -660,12 +660,12 @@
 									<div class="education_block_grid style_2">
 
 										<div class="education_block_thumb">
-											<a href="/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
+											<a href="/f/course/1"><img src="/frontend/assets/img/co-1.jpg" class="img-fluid" alt=""></a>
 											<div class="education_ratting"><i class="fa fa-star"></i>4.8 (70)</div>
 										</div>
 
 										<div class="education_block_body">
-											<h4 class="bl-title"><a href="/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
+											<h4 class="bl-title"><a href="/f/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
 										</div>
 
 										<div class="cources_info_style3">

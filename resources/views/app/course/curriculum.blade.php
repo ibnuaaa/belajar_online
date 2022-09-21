@@ -12,9 +12,9 @@
 							<div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
 							<div class="card-body pl-3 pr-3">
 								<ul class="lectures_lists">
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/lecture/1">Lecture: 01</div>Pengertian Web Design<a></li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/lecture/2">Lecture: 02</div>Video Tutorial HTML5 & CSS3</a></li>
-									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/lecture/3">Lecture: 03</div>Latihan Soal HTML 5</a></li>
+									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/f/lecture/1">Lecture: 01</div>Pengertian Web Design<a></li>
+									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/f/lecture/2">Lecture: 02</div>Video Tutorial HTML5 & CSS3</a></li>
+									<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/f/lecture/3">Lecture: 03</div>Latihan Soal HTML 5</a></li>
 									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 04</div>Create Drop Down Navigation Using CSS3</li>
 									<li class="unview"><div class="lectures_lists_title"><i class="ti-control-play"></i>Lecture: 05</div>How to Create Sticky Navigation Using JS</li>
 								</ul>

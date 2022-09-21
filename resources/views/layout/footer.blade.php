@@ -82,7 +82,7 @@
 
 
             if (getCookie('TokenType') != "" && getCookie('AccessToken')) {
-              timerSession()
+              // timerSession()
             }
 
             $('body input').on('keyup', function() {
@@ -113,26 +113,26 @@
         }
 
         var g_timeout = {{getConfig('session_timeout')}}
-        function timerSession() {
-            g_timeout = g_timeout - 1;
-            $('#time_session').html(g_timeout)
-            // $('#timer_review').html(g_timeout)
-
-
-            if (g_timeout == 0) {
-              location.href = '/logout'
-            } else {
-
-
-
-              if (g_timeout < parseInt({{getConfig('session_timeout_popup')}})) {
-                g_is_show_popup = '1'
-                $('#modalSession').modal('show');
-              }
-
-              setTimeout(timerSession, 1000);
-            }
-        }
+        // function timerSession() {
+        //     g_timeout = g_timeout - 1;
+        //     $('#time_session').html(g_timeout)
+        //     // $('#timer_review').html(g_timeout)
+        //
+        //
+        //     if (g_timeout == 0) {
+        //       location.href = '/logout'
+        //     } else {
+        //
+        //
+        //
+        //       if (g_timeout < parseInt({{getConfig('session_timeout_popup')}})) {
+        //         g_is_show_popup = '1'
+        //         $('#modalSession').modal('show');
+        //       }
+        //
+        //       setTimeout(timerSession, 1000);
+        //     }
+        // }
 
         // Dropzone.autoDiscover = false;
         window.getCookie = function(cname) {

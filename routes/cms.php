@@ -11,13 +11,28 @@ eze. Simply tell Lumen the URIs it should respond to
 | and give it the Closure to call when that URI is requested.
 |
 */
+
+// category
+$router->get('/category', 'CMS\Category\CategoryController@Home');
+$router->get('/category/new', 'CMS\Category\CategoryController@New');
+$router->get('/category/edit/{id}', 'CMS\Category\CategoryController@Edit');
+$router->get('/category/{id}', 'CMS\Category\CategoryController@Detail');
+
+// course
+$router->get('/course', 'CMS\Course\CourseController@Home');
+$router->get('/course/new', 'CMS\Course\CourseController@New');
+$router->get('/course/edit/{id}', 'CMS\Course\CourseController@Edit');
+$router->get('/course/lecture/{id}', 'CMS\Course\CourseController@Lecture');
+$router->get('/course/{id}', 'CMS\Course\CourseController@Detail');
+
+
 $router->get('/home', 'CMS\Home\HomeController@Home');
-$router->get('/courses/category/{id}', 'CMS\Home\HomeController@Courses');
-$router->get('/course/{id}', 'CMS\Home\HomeController@Course');
-$router->get('/lecture/{id}', 'CMS\Home\HomeController@Lecture');
-$router->get('/question/{id}', 'CMS\Home\HomeController@Question');
-$router->get('/me', 'CMS\Home\HomeController@Profile');
-$router->get('/instructor/{id}', 'CMS\Home\HomeController@Profile');
+$router->get('/f/courses/category/{id}', 'CMS\Home\HomeController@Courses');
+$router->get('/f/course/{id}', 'CMS\Home\HomeController@Course');
+$router->get('/f/lecture/{id}', 'CMS\Home\HomeController@Lecture');
+$router->get('/f/question/{id}', 'CMS\Home\HomeController@Question');
+$router->get('/f/me', 'CMS\Home\HomeController@Profile');
+$router->get('/f/instructor/{id}', 'CMS\Home\HomeController@Profile');
 
 $router->get('/dashboard', 'CMS\Home\HomeController@Dashboard');
 

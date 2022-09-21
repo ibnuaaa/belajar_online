@@ -53,7 +53,7 @@
 
             @if ($id == 3)
             <br><br>
-            <a href="/lecture/4" class="btn btn-success text-white">Jawab</a>
+            <a href="/f/lecture/4" class="btn btn-success text-white">Jawab</a>
             @endif
         </div>
 

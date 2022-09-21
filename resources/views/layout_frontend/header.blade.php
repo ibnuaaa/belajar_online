@@ -129,7 +129,7 @@
                     <li><a href="#">{{ $val['name'] }}<span class="submenu-indicator"></span></a>
 											<ul class="nav-dropdown nav-submenu">
                         @foreach ($val['category'] as $key2 => $val2)
-												<li><a href="/courses/category/1">{{ $val2 }}</a></li>
+												<li><a href="/f/courses/category/1">{{ $val2 }}</a></li>
                         @endforeach
 											</ul>
 										</li>

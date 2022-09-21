@@ -197,6 +197,23 @@ class MiddlewareServiceProvider extends ServiceProvider
         'Storage.DeleteByKey' => \App\Http\Middleware\Storage\DeleteByKey::class,
         'Storage.FetchThumb' => \App\Http\Middleware\Storage\FetchThumb::class,
 
+        'Category.Insert' => \App\Http\Middleware\Category\Insert::class,
+        'Category.Update' => \App\Http\Middleware\Category\Update::class,
+        'Category.Delete' => \App\Http\Middleware\Category\Delete::class,
+
+        'Course.Insert' => \App\Http\Middleware\Course\Insert::class,
+        'Course.Update' => \App\Http\Middleware\Course\Update::class,
+        'Course.Delete' => \App\Http\Middleware\Course\Delete::class,
+
+        'Section.Insert' => \App\Http\Middleware\Section\Insert::class,
+        'Section.Update' => \App\Http\Middleware\Section\Update::class,
+        'Section.Delete' => \App\Http\Middleware\Section\Delete::class,
+
+        'Lecture.Insert' => \App\Http\Middleware\Lecture\Insert::class,
+        'Lecture.Update' => \App\Http\Middleware\Lecture\Update::class,
+        'Lecture.Delete' => \App\Http\Middleware\Lecture\Delete::class,
+
+
         'PushNotification.Insert' => \App\Http\Middleware\PushNotification\Insert::class,
 
     ];

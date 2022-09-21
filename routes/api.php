@@ -68,231 +68,69 @@ $router->post($prefix.'/config', ['uses' => 'Config\ConfigController@Insert', 'm
 $router->put($prefix.'/config/{id}', ['uses' => 'Config\ConfigController@Update', 'middleware' => ['LogActivity:Config.Update','Config.Update']]);
 $router->delete($prefix.'/config/{id}', ['uses' => 'Config\ConfigController@Delete', 'middleware' => ['LogActivity:Config.Delete','Config.Delete']]);
 
-// golongan
-$router->get($prefix.'/golongan', ['uses' => 'Golongan\GolonganBrowseController@get', 'middleware' => ['LogActivity:Golongan.View','ArrQuery']]);
-$router->get($prefix.'/golongan/{query:.+}', ['uses' => 'Golongan\GolonganBrowseController@get', 'middleware' => ['Golongan:Golongan.View','ArrQuery']]);
-$router->post($prefix.'/golongan', ['uses' => 'Golongan\GolonganController@Insert', 'middleware' => ['LogActivity:Golongan.Insert','Golongan.Insert']]);
-$router->put($prefix.'/golongan/{id}', ['uses' => 'Golongan\GolonganController@Update', 'middleware' => ['LogActivity:Golongan.Update','Golongan.Update']]);
-$router->delete($prefix.'/golongan/{id}', ['uses' => 'Golongan\GolonganController@Delete', 'middleware' => ['LogActivity:Golongan.Delete','Golongan.Delete']]);
-
-// perilaku_kerja
-$router->get($prefix.'/indikator_tetap', ['uses' => 'IndikatorTetap\IndikatorTetapBrowseController@get', 'middleware' => ['LogActivity:IndikatorTetap.View','ArrQuery']]);
-$router->get($prefix.'/indikator_tetap/{query:.+}', ['uses' => 'IndikatorTetap\IndikatorTetapBrowseController@get', 'middleware' => ['IndikatorTetap:IndikatorTetap.View','ArrQuery']]);
-$router->post($prefix.'/indikator_tetap', ['uses' => 'IndikatorTetap\IndikatorTetapController@Insert', 'middleware' => ['LogActivity:IndikatorTetap.Insert','IndikatorTetap.Insert']]);
-$router->put($prefix.'/indikator_tetap/{id}', ['uses' => 'IndikatorTetap\IndikatorTetapController@Update', 'middleware' => ['LogActivity:IndikatorTetap.Update','IndikatorTetap.Update']]);
-$router->delete($prefix.'/indikator_tetap/{id}', ['uses' => 'IndikatorTetap\IndikatorTetapController@Delete', 'middleware' => ['LogActivity:IndikatorTetap.Delete','IndikatorTetap.Delete']]);
-
-
-// user_pendidikan
-$router->get($prefix.'/user_pendidikan', ['uses' => 'UserPendidikan\UserPendidikanBrowseController@get', 'middleware' => ['LogActivity:UserPendidikan.View','ArrQuery']]);
-$router->get($prefix.'/user_pendidikan/{query:.+}', ['uses' => 'UserPendidikan\UserPendidikanBrowseController@get', 'middleware' => ['UserPendidikan:UserPendidikan.View','ArrQuery']]);
-$router->post($prefix.'/user_pendidikan', ['uses' => 'UserPendidikan\UserPendidikanController@Insert', 'middleware' => ['LogActivity:UserPendidikan.Insert','UserPendidikan.Insert']]);
-$router->put($prefix.'/user_pendidikan/{id}', ['uses' => 'UserPendidikan\UserPendidikanController@Update', 'middleware' => ['LogActivity:UserPendidikan.Update','UserPendidikan.Update']]);
-$router->delete($prefix.'/user_pendidikan/{id}', ['uses' => 'UserPendidikan\UserPendidikanController@Delete', 'middleware' => ['LogActivity:UserPendidikan.Delete','UserPendidikan.Delete']]);
-
-// user_pendidikan_request
-$router->get($prefix.'/user_pendidikan_request', ['uses' => 'UserPendidikanRequest\UserPendidikanRequestBrowseController@get', 'middleware' => ['LogActivity:UserPendidikanRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_pendidikan_request/{query:.+}', ['uses' => 'UserPendidikanRequest\UserPendidikanRequestBrowseController@get', 'middleware' => ['UserPendidikanRequest:UserPendidikanRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_pendidikan_request', ['uses' => 'UserPendidikanRequest\UserPendidikanRequestController@Insert', 'middleware' => ['LogActivity:UserPendidikanRequest.Insert','UserPendidikanRequest.Insert']]);
-$router->put($prefix.'/user_pendidikan_request/{id}', ['uses' => 'UserPendidikanRequest\UserPendidikanRequestController@Update', 'middleware' => ['LogActivity:UserPendidikanRequest.Update','UserPendidikanRequest.Update']]);
-$router->delete($prefix.'/user_pendidikan_request/{id}', ['uses' => 'UserPendidikanRequest\UserPendidikanRequestController@Delete', 'middleware' => ['LogActivity:UserPendidikanRequest.Delete','UserPendidikanRequest.Delete']]);
-
-// user_jabatan_fungsional
-$router->get($prefix.'/user_jabatan_fungsional', ['uses' => 'UserJabatanFungsional\UserJabatanFungsionalBrowseController@get', 'middleware' => ['LogActivity:UserJabatanFungsional.View','ArrQuery']]);
-$router->get($prefix.'/user_jabatan_fungsional/{query:.+}', ['uses' => 'UserJabatanFungsional\UserJabatanFungsionalBrowseController@get', 'middleware' => ['UserJabatanFungsional:UserJabatanFungsional.View','ArrQuery']]);
-$router->post($prefix.'/user_jabatan_fungsional', ['uses' => 'UserJabatanFungsional\UserJabatanFungsionalController@Insert', 'middleware' => ['LogActivity:UserJabatanFungsional.Insert','UserJabatanFungsional.Insert']]);
-$router->put($prefix.'/user_jabatan_fungsional/{id}', ['uses' => 'UserJabatanFungsional\UserJabatanFungsionalController@Update', 'middleware' => ['LogActivity:UserJabatanFungsional.Update','UserJabatanFungsional.Update']]);
-$router->delete($prefix.'/user_jabatan_fungsional/{id}', ['uses' => 'UserJabatanFungsional\UserJabatanFungsionalController@Delete', 'middleware' => ['LogActivity:UserJabatanFungsional.Delete','UserJabatanFungsional.Delete']]);
-
-// user_jabatan_fungsional_request
-$router->get($prefix.'/user_jabatan_fungsional_request', ['uses' => 'UserJabatanFungsionalRequest\UserJabatanFungsionalRequestBrowseController@get', 'middleware' => ['LogActivity:UserJabatanFungsionalRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_jabatan_fungsional_request/{query:.+}', ['uses' => 'UserJabatanFungsionalRequest\UserJabatanFungsionalRequestBrowseController@get', 'middleware' => ['UserJabatanFungsionalRequest:UserJabatanFungsionalRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_jabatan_fungsional_request', ['uses' => 'UserJabatanFungsionalRequest\UserJabatanFungsionalRequestController@Insert', 'middleware' => ['LogActivity:UserJabatanFungsionalRequest.Insert','UserJabatanFungsionalRequest.Insert']]);
-$router->put($prefix.'/user_jabatan_fungsional_request/{id}', ['uses' => 'UserJabatanFungsionalRequest\UserJabatanFungsionalRequestController@Update', 'middleware' => ['LogActivity:UserJabatanFungsionalRequest.Update','UserJabatanFungsionalRequest.Update']]);
-$router->delete($prefix.'/user_jabatan_fungsional_request/{id}', ['uses' => 'UserJabatanFungsionalRequest\UserJabatanFungsionalRequestController@Delete', 'middleware' => ['LogActivity:UserJabatanFungsionalRequest.Delete','UserJabatanFungsionalRequest.Delete']]);
-
-
-// user_pelatihan
-$router->get($prefix.'/user_pelatihan', ['uses' => 'UserPelatihan\UserPelatihanBrowseController@get', 'middleware' => ['LogActivity:UserPelatihan.View','ArrQuery']]);
-$router->get($prefix.'/user_pelatihan/{query:.+}', ['uses' => 'UserPelatihan\UserPelatihanBrowseController@get', 'middleware' => ['UserPelatihan:UserPelatihan.View','ArrQuery']]);
-$router->post($prefix.'/user_pelatihan', ['uses' => 'UserPelatihan\UserPelatihanController@Insert', 'middleware' => ['LogActivity:UserPelatihan.Insert','UserPelatihan.Insert']]);
-$router->put($prefix.'/user_pelatihan/{id}', ['uses' => 'UserPelatihan\UserPelatihanController@Update', 'middleware' => ['LogActivity:UserPelatihan.Update','UserPelatihan.Update']]);
-$router->delete($prefix.'/user_pelatihan/{id}', ['uses' => 'UserPelatihan\UserPelatihanController@Delete', 'middleware' => ['LogActivity:UserPelatihan.Delete','UserPelatihan.Delete']]);
-
-// user_pelatihan_request
-$router->get($prefix.'/user_pelatihan_request', ['uses' => 'UserPelatihanRequest\UserPelatihanRequestBrowseController@get', 'middleware' => ['LogActivity:UserPelatihanRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_pelatihan_request/{query:.+}', ['uses' => 'UserPelatihanRequest\UserPelatihanRequestBrowseController@get', 'middleware' => ['UserPelatihanRequest:UserPelatihanRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_pelatihan_request', ['uses' => 'UserPelatihanRequest\UserPelatihanRequestController@Insert', 'middleware' => ['LogActivity:UserPelatihanRequest.Insert','UserPelatihanRequest.Insert']]);
-$router->put($prefix.'/user_pelatihan_request/{id}', ['uses' => 'UserPelatihanRequest\UserPelatihanRequestController@Update', 'middleware' => ['LogActivity:UserPelatihanRequest.Update','UserPelatihanRequest.Update']]);
-$router->delete($prefix.'/user_pelatihan_request/{id}', ['uses' => 'UserPelatihanRequest\UserPelatihanRequestController@Delete', 'middleware' => ['LogActivity:UserPelatihanRequest.Delete','UserPelatihanRequest.Delete']]);
-
-// user_keluarga
-$router->get($prefix.'/user_keluarga', ['uses' => 'UserKeluarga\UserKeluargaBrowseController@get', 'middleware' => ['LogActivity:UserKeluarga.View','ArrQuery']]);
-$router->get($prefix.'/user_keluarga/{query:.+}', ['uses' => 'UserKeluarga\UserKeluargaBrowseController@get', 'middleware' => ['UserKeluarga:UserKeluarga.View','ArrQuery']]);
-$router->post($prefix.'/user_keluarga', ['uses' => 'UserKeluarga\UserKeluargaController@Insert', 'middleware' => ['LogActivity:UserKeluarga.Insert','UserKeluarga.Insert']]);
-$router->put($prefix.'/user_keluarga/{id}', ['uses' => 'UserKeluarga\UserKeluargaController@Update', 'middleware' => ['LogActivity:UserKeluarga.Update','UserKeluarga.Update']]);
-$router->delete($prefix.'/user_keluarga/{id}', ['uses' => 'UserKeluarga\UserKeluargaController@Delete', 'middleware' => ['LogActivity:UserKeluarga.Delete','UserKeluarga.Delete']]);
-
-// user_keluarga_request
-$router->get($prefix.'/user_keluarga_request', ['uses' => 'UserKeluargaRequest\UserKeluargaRequestBrowseController@get', 'middleware' => ['LogActivity:UserKeluargaRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_keluarga_request/{query:.+}', ['uses' => 'UserKeluargaRequest\UserKeluargaRequestBrowseController@get', 'middleware' => ['UserKeluargaRequest:UserKeluargaRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_keluarga_request', ['uses' => 'UserKeluargaRequest\UserKeluargaRequestController@Insert', 'middleware' => ['LogActivity:UserKeluargaRequest.Insert','UserKeluargaRequest.Insert']]);
-$router->put($prefix.'/user_keluarga_request/{id}', ['uses' => 'UserKeluargaRequest\UserKeluargaRequestController@Update', 'middleware' => ['LogActivity:UserKeluargaRequest.Update','UserKeluargaRequest.Update']]);
-$router->delete($prefix.'/user_keluarga_request/{id}', ['uses' => 'UserKeluargaRequest\UserKeluargaRequestController@Delete', 'middleware' => ['LogActivity:UserKeluargaRequest.Delete','UserKeluargaRequest.Delete']]);
-
-// user_jabatan
-$router->get($prefix.'/user_jabatan', ['uses' => 'UserJabatan\UserJabatanBrowseController@get', 'middleware' => ['LogActivity:UserJabatan.View','ArrQuery']]);
-$router->get($prefix.'/user_jabatan/{query:.+}', ['uses' => 'UserJabatan\UserJabatanBrowseController@get', 'middleware' => ['UserJabatan:UserJabatan.View','ArrQuery']]);
-$router->post($prefix.'/user_jabatan', ['uses' => 'UserJabatan\UserJabatanController@Insert', 'middleware' => ['LogActivity:UserJabatan.Insert','UserJabatan.Insert']]);
-$router->put($prefix.'/user_jabatan/{id}', ['uses' => 'UserJabatan\UserJabatanController@Update', 'middleware' => ['LogActivity:UserJabatan.Update','UserJabatan.Update']]);
-$router->delete($prefix.'/user_jabatan/{id}', ['uses' => 'UserJabatan\UserJabatanController@Delete', 'middleware' => ['LogActivity:UserJabatan.Delete','UserJabatan.Delete']]);
-
-// user_jabatan_request
-$router->get($prefix.'/user_jabatan_request', ['uses' => 'UserJabatanRequest\UserJabatanRequestBrowseController@get', 'middleware' => ['LogActivity:UserJabatanRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_jabatan_request/{query:.+}', ['uses' => 'UserJabatanRequest\UserJabatanRequestBrowseController@get', 'middleware' => ['UserJabatanRequest:UserJabatanRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_jabatan_request', ['uses' => 'UserJabatanRequest\UserJabatanRequestController@Insert', 'middleware' => ['LogActivity:UserJabatanRequest.Insert','UserJabatanRequest.Insert']]);
-$router->put($prefix.'/user_jabatan_request/{id}', ['uses' => 'UserJabatanRequest\UserJabatanRequestController@Update', 'middleware' => ['LogActivity:UserJabatanRequest.Update','UserJabatanRequest.Update']]);
-$router->delete($prefix.'/user_jabatan_request/{id}', ['uses' => 'UserJabatanRequest\UserJabatanRequestController@Delete', 'middleware' => ['LogActivity:UserJabatanRequest.Delete','UserJabatanRequest.Delete']]);
-
-// user_golongan
-$router->get($prefix.'/user_golongan', ['uses' => 'UserGolongan\UserGolonganBrowseController@get', 'middleware' => ['LogActivity:UserGolongan.View','ArrQuery']]);
-$router->get($prefix.'/user_golongan/{query:.+}', ['uses' => 'UserGolongan\UserGolonganBrowseController@get', 'middleware' => ['UserGolongan:UserGolongan.View','ArrQuery']]);
-$router->post($prefix.'/user_golongan', ['uses' => 'UserGolongan\UserGolonganController@Insert', 'middleware' => ['LogActivity:UserGolongan.Insert','UserGolongan.Insert']]);
-$router->put($prefix.'/user_golongan/{id}', ['uses' => 'UserGolongan\UserGolonganController@Update', 'middleware' => ['LogActivity:UserGolongan.Update','UserGolongan.Update']]);
-$router->delete($prefix.'/user_golongan/{id}', ['uses' => 'UserGolongan\UserGolonganController@Delete', 'middleware' => ['LogActivity:UserGolongan.Delete','UserGolongan.Delete']]);
-
-// user_golongan_request
-$router->get($prefix.'/user_golongan_request', ['uses' => 'UserGolonganRequest\UserGolonganRequestBrowseController@get', 'middleware' => ['LogActivity:UserGolonganRequest.View','ArrQuery']]);
-$router->get($prefix.'/user_golongan_request/{query:.+}', ['uses' => 'UserGolonganRequest\UserGolonganRequestBrowseController@get', 'middleware' => ['UserGolonganRequest:UserGolonganRequest.View','ArrQuery']]);
-$router->post($prefix.'/user_golongan_request', ['uses' => 'UserGolonganRequest\UserGolonganRequestController@Insert', 'middleware' => ['LogActivity:UserGolonganRequest.Insert','UserGolonganRequest.Insert']]);
-$router->put($prefix.'/user_golongan_request/{id}', ['uses' => 'UserGolonganRequest\UserGolonganRequestController@Update', 'middleware' => ['LogActivity:UserGolonganRequest.Update','UserGolonganRequest.Update']]);
-$router->delete($prefix.'/user_golongan_request/{id}', ['uses' => 'UserGolonganRequest\UserGolonganRequestController@Delete', 'middleware' => ['LogActivity:UserGolonganRequest.Delete','UserGolonganRequest.Delete']]);
-
-// pendidikan
-$router->get($prefix.'/pendidikan', ['uses' => 'Pendidikan\PendidikanBrowseController@get', 'middleware' => ['LogActivity:Pendidikan.View','ArrQuery']]);
-$router->get($prefix.'/pendidikan/{query:.+}', ['uses' => 'Pendidikan\PendidikanBrowseController@get', 'middleware' => ['Pendidikan:Pendidikan.View','ArrQuery']]);
-$router->post($prefix.'/pendidikan', ['uses' => 'Pendidikan\PendidikanController@Insert', 'middleware' => ['LogActivity:Pendidikan.Insert','Pendidikan.Insert']]);
-$router->put($prefix.'/pendidikan/{id}', ['uses' => 'Pendidikan\PendidikanController@Update', 'middleware' => ['LogActivity:Pendidikan.Update','Pendidikan.Update']]);
-$router->delete($prefix.'/pendidikan/{id}', ['uses' => 'Pendidikan\PendidikanController@Delete', 'middleware' => ['LogActivity:Pendidikan.Delete','Pendidikan.Delete']]);
-
-// complaint
-$router->get($prefix.'/complaint', ['uses' => 'Complaint\ComplaintBrowseController@get', 'middleware' => ['LogActivity:Complaint.View','ArrQuery']]);
-$router->get($prefix.'/complaint/{query:.+}', ['uses' => 'Complaint\ComplaintBrowseController@get', 'middleware' => ['Complaint:Complaint.View','ArrQuery']]);
-$router->post($prefix.'/complaint', ['uses' => 'Complaint\ComplaintController@Insert', 'middleware' => ['LogActivity:Complaint.Insert','Complaint.Insert']]);
-$router->put($prefix.'/complaint/{id}', ['uses' => 'Complaint\ComplaintController@Update', 'middleware' => ['LogActivity:Complaint.Update','Complaint.Update']]);
-$router->delete($prefix.'/complaint/{id}', ['uses' => 'Complaint\ComplaintController@Delete', 'middleware' => ['LogActivity:Complaint.Delete','Complaint.Delete']]);
-
-// complaint_to
-$router->get($prefix.'/complaint_to', ['uses' => 'ComplaintTo\ComplaintToBrowseController@get', 'middleware' => ['LogActivity:ComplaintTo.View','ArrQuery']]);
-$router->get($prefix.'/complaint_to/{query:.+}', ['uses' => 'ComplaintTo\ComplaintToBrowseController@get', 'middleware' => ['LogActivity:ComplaintTo.View','ArrQuery']]);
-$router->post($prefix.'/complaint_to', ['uses' => 'ComplaintTo\ComplaintToController@Insert', 'middleware' => ['LogActivity:ComplaintTo.Insert','ComplaintTo.Insert']]);
-$router->put($prefix.'/complaint_to/{id}', ['uses' => 'ComplaintTo\ComplaintToController@Update', 'middleware' => ['LogActivity:ComplaintTo.Update','ComplaintTo.Update']]);
-$router->delete($prefix.'/complaint_to/{id}', ['uses' => 'ComplaintTo\ComplaintToController@Delete', 'middleware' => ['LogActivity:ComplaintTo.Delete','ComplaintTo.Delete']]);
-
-// complaint_reply
-$router->get($prefix.'/complaint_reply', ['uses' => 'ComplaintReply\ComplaintReplyBrowseController@get', 'middleware' => ['LogActivity:ComplaintReply.View','ArrQuery']]);
-$router->get($prefix.'/complaint_reply/{query:.+}', ['uses' => 'ComplaintReply\ComplaintReplyBrowseController@get', 'middleware' => ['LogActivity:ComplaintReply.View','ArrQuery']]);
-$router->post($prefix.'/complaint_reply', ['uses' => 'ComplaintReply\ComplaintReplyController@Insert', 'middleware' => ['LogActivity:ComplaintReply.Insert','ComplaintReply.Insert']]);
-$router->put($prefix.'/complaint_reply/{id}', ['uses' => 'ComplaintReply\ComplaintReplyController@Update', 'middleware' => ['LogActivity:ComplaintReply.Update','ComplaintReply.Update']]);
-$router->delete($prefix.'/complaint_reply/{id}', ['uses' => 'ComplaintReply\ComplaintReplyController@Delete', 'middleware' => ['LogActivity:ComplaintReply.Delete','ComplaintReply.Delete']]);
-
-// plt
-$router->get($prefix.'/plt', ['uses' => 'Plt\PltBrowseController@get', 'middleware' => ['LogActivity:Plt.View','ArrQuery']]);
-$router->get($prefix.'/plt/{query:.+}', ['uses' => 'Plt\PltBrowseController@get', 'middleware' => ['Plt:Plt.View','ArrQuery']]);
-$router->post($prefix.'/plt', ['uses' => 'Plt\PltController@Insert', 'middleware' => ['LogActivity:Plt.Insert','Plt.Insert']]);
-$router->put($prefix.'/plt/{id}', ['uses' => 'Plt\PltController@Update', 'middleware' => ['LogActivity:Plt.Update','Plt.Update']]);
-$router->delete($prefix.'/plt/{id}', ['uses' => 'Plt\PltController@Delete', 'middleware' => ['LogActivity:Plt.Delete','Plt.Delete']]);
-
-
-// kampus
-$router->get($prefix.'/kampus', ['uses' => 'Kampus\KampusBrowseController@get', 'middleware' => ['LogActivity:Kampus.View','ArrQuery']]);
-$router->get($prefix.'/kampus/{query:.+}', ['uses' => 'Kampus\KampusBrowseController@get', 'middleware' => ['Kampus:Kampus.View','ArrQuery']]);
-$router->post($prefix.'/kampus', ['uses' => 'Kampus\KampusController@Insert', 'middleware' => ['LogActivity:Kampus.Insert','Kampus.Insert']]);
-$router->put($prefix.'/kampus/{id}', ['uses' => 'Kampus\KampusController@Update', 'middleware' => ['LogActivity:Kampus.Update','Kampus.Update']]);
-$router->delete($prefix.'/kampus/{id}', ['uses' => 'Kampus\KampusController@Delete', 'middleware' => ['LogActivity:Kampus.Delete','Kampus.Delete']]);
-
-// pelatihan
-$router->get($prefix.'/pelatihan', ['uses' => 'Pelatihan\PelatihanBrowseController@get', 'middleware' => ['LogActivity:Pelatihan.View','ArrQuery']]);
-$router->get($prefix.'/pelatihan/{query:.+}', ['uses' => 'Pelatihan\PelatihanBrowseController@get', 'middleware' => ['Pelatihan:Pelatihan.View','ArrQuery']]);
-$router->post($prefix.'/pelatihan', ['uses' => 'Pelatihan\PelatihanController@Insert', 'middleware' => ['LogActivity:Pelatihan.Insert','Pelatihan.Insert']]);
-$router->put($prefix.'/pelatihan/{id}', ['uses' => 'Pelatihan\PelatihanController@Update', 'middleware' => ['LogActivity:Pelatihan.Update','Pelatihan.Update']]);
-$router->delete($prefix.'/pelatihan/{id}', ['uses' => 'Pelatihan\PelatihanController@Delete', 'middleware' => ['LogActivity:Pelatihan.Delete','Pelatihan.Delete']]);
-
-// status_pegawai
-$router->get($prefix.'/status_pegawai', ['uses' => 'StatusPegawai\StatusPegawaiBrowseController@get', 'middleware' => ['LogActivity:StatusPegawai.View','ArrQuery']]);
-$router->get($prefix.'/status_pegawai/{query:.+}', ['uses' => 'StatusPegawai\StatusPegawaiBrowseController@get', 'middleware' => ['StatusPegawai:StatusPegawai.View','ArrQuery']]);
-$router->post($prefix.'/status_pegawai', ['uses' => 'StatusPegawai\StatusPegawaiController@Insert', 'middleware' => ['LogActivity:StatusPegawai.Insert','StatusPegawai.Insert']]);
-$router->put($prefix.'/status_pegawai/{id}', ['uses' => 'StatusPegawai\StatusPegawaiController@Update', 'middleware' => ['LogActivity:StatusPegawai.Update','StatusPegawai.Update']]);
-$router->delete($prefix.'/status_pegawai/{id}', ['uses' => 'StatusPegawai\StatusPegawaiController@Delete', 'middleware' => ['LogActivity:StatusPegawai.Delete','StatusPegawai.Delete']]);
-
-// document_unit
-$router->get($prefix.'/document_unit', ['uses' => 'DocumentUnit\DocumentUnitBrowseController@get', 'middleware' => ['LogActivity:DocumentUnit.View','ArrQuery']]);
-$router->get($prefix.'/document_unit/{query:.+}', ['uses' => 'DocumentUnit\DocumentUnitBrowseController@get', 'middleware' => ['DocumentUnit:DocumentUnit.View','ArrQuery']]);
-$router->post($prefix.'/document_unit', ['uses' => 'DocumentUnit\DocumentUnitController@Insert', 'middleware' => ['LogActivity:DocumentUnit.Insert','DocumentUnit.Insert']]);
-$router->post($prefix.'/document_unit/approve', ['uses' => 'DocumentUnit\DocumentUnitController@Approve', 'middleware' => ['LogActivity:DocumentUnit.Approve','DocumentUnit.Approve']]);
-$router->put($prefix.'/document_unit/{id}', ['uses' => 'DocumentUnit\DocumentUnitController@Update', 'middleware' => ['LogActivity:DocumentUnit.Update','DocumentUnit.Update']]);
-$router->delete($prefix.'/document_unit/{id}', ['uses' => 'DocumentUnit\DocumentUnitController@Delete', 'middleware' => ['LogActivity:DocumentUnit.Delete','DocumentUnit.Delete']]);
-
-
-// jabatan_fungsional
-$router->get($prefix.'/jabatan_fungsional', ['uses' => 'JabatanFungsional\JabatanFungsionalBrowseController@get', 'middleware' => ['LogActivity:JabatanFungsional.View','ArrQuery']]);
-$router->get($prefix.'/jabatan_fungsional/{query:.+}', ['uses' => 'JabatanFungsional\JabatanFungsionalBrowseController@get', 'middleware' => ['JabatanFungsional:JabatanFungsional.View','ArrQuery']]);
-$router->post($prefix.'/jabatan_fungsional', ['uses' => 'JabatanFungsional\JabatanFungsionalController@Insert', 'middleware' => ['LogActivity:JabatanFungsional.Insert','JabatanFungsional.Insert']]);
-$router->put($prefix.'/jabatan_fungsional/{id}', ['uses' => 'JabatanFungsional\JabatanFungsionalController@Update', 'middleware' => ['LogActivity:JabatanFungsional.Update','JabatanFungsional.Update']]);
-$router->delete($prefix.'/jabatan_fungsional/{id}', ['uses' => 'JabatanFungsional\JabatanFungsionalController@Delete', 'middleware' => ['LogActivity:JabatanFungsional.Delete','JabatanFungsional.Delete']]);
-
-// penilaian_logbook
-$router->get($prefix.'/penilaian_logbook', ['uses' => 'PenilaianLogbook\PenilaianLogbookBrowseController@get', 'middleware' => ['LogActivity:PenilaianLogbook.View','ArrQuery']]);
-$router->get($prefix.'/penilaian_logbook/{query:.+}', ['uses' => 'PenilaianLogbook\PenilaianLogbookBrowseController@get', 'middleware' => ['PenilaianLogbook:PenilaianLogbook.View','ArrQuery']]);
-$router->post($prefix.'/penilaian_logbook', ['uses' => 'PenilaianLogbook\PenilaianLogbookController@Insert', 'middleware' => ['LogActivity:PenilaianLogbook.Insert','PenilaianLogbook.Insert']]);
-$router->put($prefix.'/penilaian_logbook', ['uses' => 'PenilaianLogbook\PenilaianLogbookController@Update', 'middleware' => ['LogActivity:PenilaianLogbook.Update','PenilaianLogbook.Update']]);
-$router->delete($prefix.'/penilaian_logbook/{id}', ['uses' => 'PenilaianLogbook\PenilaianLogbookController@Delete', 'middleware' => ['LogActivity:PenilaianLogbook.Delete','PenilaianLogbook.Delete']]);
-
-// pendidikan
-$router->get($prefix.'/indikator_', ['uses' => 'IndikatorSkp\IndikatorSkpBrowseController@get', 'middleware' => ['LogActivity:IndikatorSkp.View','ArrQuery']]);
-$router->get($prefix.'/indikator_/{query:.+}', ['uses' => 'IndikatorSkp\IndikatorSkpBrowseController@get', 'middleware' => ['IndikatorSkp:IndikatorSkp.View','ArrQuery']]);
-$router->post($prefix.'/indikator_', ['uses' => 'IndikatorSkp\IndikatorSkpController@Insert', 'middleware' => ['LogActivity:IndikatorSkp.Insert','IndikatorSkp.Insert']]);
-$router->put($prefix.'/indikator_/{id}', ['uses' => 'IndikatorSkp\IndikatorSkpController@Update', 'middleware' => ['LogActivity:IndikatorSkp.Update','IndikatorSkp.Update']]);
-$router->delete($prefix.'/indikator_/{id}', ['uses' => 'IndikatorSkp\IndikatorSkpController@Delete', 'middleware' => ['LogActivity:IndikatorSkp.Delete','IndikatorSkp.Delete']]);
-
-// penilaian_prestasi_kerja
-$router->get($prefix.'/penilaian_prestasi_kerja', ['uses' => 'PenilaianPrestasiKerja\PenilaianPrestasiKerjaBrowseController@get', 'middleware' => ['LogActivity:PenilaianPrestasiKerja.View','ArrQuery']]);
-$router->get($prefix.'/penilaian_prestasi_kerja/{query:.+}', ['uses' => 'PenilaianPrestasiKerja\PenilaianPrestasiKerjaBrowseController@get', 'middleware' => ['PenilaianPrestasiKerja:PenilaianPrestasiKerja.View','ArrQuery']]);
-$router->post($prefix.'/penilaian_prestasi_kerja', ['uses' => 'PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Insert', 'middleware' => ['LogActivity:PenilaianPrestasiKerja.Insert','PenilaianPrestasiKerja.Insert']]);
-$router->put($prefix.'/penilaian_prestasi_kerja/{id}', ['uses' => 'PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Update', 'middleware' => ['LogActivity:PenilaianPrestasiKerja.Update','PenilaianPrestasiKerja.Update']]);
-$router->delete($prefix.'/penilaian_prestasi_kerja/{id}', ['uses' => 'PenilaianPrestasiKerja\PenilaianPrestasiKerjaController@Delete', 'middleware' => ['LogActivity:PenilaianPrestasiKerja.Delete','PenilaianPrestasiKerja.Delete']]);
-
-// penilaian_perilaku_kerja
-$router->get($prefix.'/penilaian_perilaku_kerja', ['uses' => 'PenilaianPerilakuKerja\PenilaianPerilakuKerjaBrowseController@get', 'middleware' => ['LogActivity:PenilaianPerilakuKerja.View','ArrQuery']]);
-$router->get($prefix.'/penilaian_perilaku_kerja/{query:.+}', ['uses' => 'PenilaianPerilakuKerja\PenilaianPerilakuKerjaBrowseController@get', 'middleware' => ['PenilaianPerilakuKerja:PenilaianPerilakuKerja.View','ArrQuery']]);
-$router->post($prefix.'/penilaian_perilaku_kerja', ['uses' => 'PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Insert', 'middleware' => ['LogActivity:PenilaianPerilakuKerja.Insert','PenilaianPerilakuKerja.Insert']]);
-$router->put($prefix.'/penilaian_perilaku_kerja/{id}', ['uses' => 'PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Update', 'middleware' => ['LogActivity:PenilaianPerilakuKerja.Update','PenilaianPerilakuKerja.Update']]);
-$router->delete($prefix.'/penilaian_perilaku_kerja/{id}', ['uses' => 'PenilaianPerilakuKerja\PenilaianPerilakuKerjaController@Delete', 'middleware' => ['LogActivity:PenilaianPerilakuKerja.Delete','PenilaianPerilakuKerja.Delete']]);
-
-
-// penilaian_prestasi_kerja_item
-$router->get($prefix.'/penilaian_prestasi_kerja_item', ['uses' => 'PenilaianPrestasiKerjaItem\PenilaianPrestasiKerjaItemBrowseController@get', 'middleware' => ['LogActivity:PenilaianPrestasiKerjaItem.View','ArrQuery']]);
-$router->get($prefix.'/penilaian_prestasi_kerja_item/{query:.+}', ['uses' => 'PenilaianPrestasiKerjaItem\PenilaianPrestasiKerjaItemBrowseController@get', 'middleware' => ['PenilaianPrestasiKerjaItem:PenilaianPrestasiKerjaItem.View','ArrQuery']]);
-$router->post($prefix.'/penilaian_prestasi_kerja_item', ['uses' => 'PenilaianPrestasiKerjaItem\PenilaianPrestasiKerjaItemController@Insert', 'middleware' => ['LogActivity:PenilaianPrestasiKerjaItem.Insert','PenilaianPrestasiKerjaItem.Insert']]);
-$router->put($prefix.'/penilaian_prestasi_kerja_item/{id}', ['uses' => 'PenilaianPrestasiKerjaItem\PenilaianPrestasiKerjaItemController@Update', 'middleware' => ['LogActivity:PenilaianPrestasiKerjaItem.Update','PenilaianPrestasiKerjaItem.Update']]);
-$router->delete($prefix.'/penilaian_prestasi_kerja_item/{id}', ['uses' => 'PenilaianPrestasiKerjaItem\PenilaianPrestasiKerjaItemController@Delete', 'middleware' => ['LogActivity:PenilaianPrestasiKerjaItem.Delete','PenilaianPrestasiKerjaItem.Delete']]);
-
-
-// indikator_kinerja
-$router->get($prefix.'/indikator_kinerja', ['uses' => 'IndikatorKinerja\IndikatorKinerjaBrowseController@get', 'middleware' => ['LogActivity:IndikatorKinerja.View','ArrQuery']]);
-$router->get($prefix.'/indikator_kinerja/{query:.+}', ['uses' => 'IndikatorKinerja\IndikatorKinerjaBrowseController@get', 'middleware' => ['IndikatorKinerja:IndikatorKinerja.View','ArrQuery']]);
-$router->post($prefix.'/indikator_kinerja', ['uses' => 'IndikatorKinerja\IndikatorKinerjaController@Insert', 'middleware' => ['LogActivity:IndikatorKinerja.Insert','IndikatorKinerja.Insert']]);
-$router->put($prefix.'/indikator_kinerja/{id}', ['uses' => 'IndikatorKinerja\IndikatorKinerjaController@Update', 'middleware' => ['LogActivity:IndikatorKinerja.Update','IndikatorKinerja.Update']]);
-$router->delete($prefix.'/indikator_kinerja/{id}', ['uses' => 'IndikatorKinerja\IndikatorKinerjaController@Delete', 'middleware' => ['LogActivity:IndikatorKinerja.Delete','IndikatorKinerja.Delete']]);
-
-// indikator_skp
-$router->get($prefix.'/indikator_skp', ['uses' => 'IndikatorSkp\IndikatorSkpBrowseController@get', 'middleware' => ['LogActivity:IndikatorSkp.View','ArrQuery']]);
-$router->get($prefix.'/indikator_skp/{query:.+}', ['uses' => 'IndikatorSkp\IndikatorSkpBrowseController@get', 'middleware' => ['IndikatorSkp:IndikatorSkp.View','ArrQuery']]);
-$router->post($prefix.'/indikator_skp', ['uses' => 'IndikatorSkp\IndikatorSkpController@Insert', 'middleware' => ['LogActivity:IndikatorSkp.Insert','IndikatorSkp.Insert']]);
-$router->put($prefix.'/indikator_skp/{id}', ['uses' => 'IndikatorSkp\IndikatorSkpController@Update', 'middleware' => ['LogActivity:IndikatorSkp.Update','IndikatorSkp.Update']]);
-$router->delete($prefix.'/indikator_skp/{id}', ['uses' => 'IndikatorSkp\IndikatorSkpController@Delete', 'middleware' => ['LogActivity:IndikatorSkp.Delete','IndikatorSkp.Delete']]);
-
-
 $router->post($prefix.'/user', ['uses' => 'User\UserController@Insert', 'middleware' => ['LogActivity:User.Insert','User.Insert']]);
 $router->put($prefix.'/user/change_password', ['uses' => 'User\UserController@ChangePassword', 'middleware' => ['LogActivity:User.ChangePassword','User.ChangePassword']]);
 $router->put($prefix.'/user/{id}', ['uses' => 'User\UserController@Update', 'middleware' => ['LogActivity:User.Update','User.Update']]);
+
+// category
+$router->get($prefix.'/category', ['uses' => 'Category\CategoryBrowseController@get', 'middleware' => ['LogActivity:Category.View','ArrQuery']]);
+$router->get($prefix.'/category/{query:.+}', ['uses' => 'Category\CategoryBrowseController@get', 'middleware' => ['Category:Category.View','ArrQuery']]);
+$router->post($prefix.'/category', ['uses' => 'Category\CategoryController@Insert', 'middleware' => ['LogActivity:Category.Insert','Category.Insert']]);
+$router->put($prefix.'/category/{id}', ['uses' => 'Category\CategoryController@Update', 'middleware' => ['LogActivity:Category.Update','Category.Update']]);
+$router->delete($prefix.'/category/{id}', ['uses' => 'Category\CategoryController@Delete', 'middleware' => ['LogActivity:Category.Delete','Category.Delete']]);
+
+// course
+$router->get($prefix.'/course', ['uses' => 'Course\CourseBrowseController@get', 'middleware' => ['LogActivity:Course.View','ArrQuery']]);
+$router->get($prefix.'/course/{query:.+}', ['uses' => 'Course\CourseBrowseController@get', 'middleware' => ['Course:Course.View','ArrQuery']]);
+$router->post($prefix.'/course', ['uses' => 'Course\CourseController@Insert', 'middleware' => ['LogActivity:Course.Insert','Course.Insert']]);
+$router->put($prefix.'/course/{id}', ['uses' => 'Course\CourseController@Update', 'middleware' => ['LogActivity:Course.Update','Course.Update']]);
+$router->delete($prefix.'/course/{id}', ['uses' => 'Course\CourseController@Delete', 'middleware' => ['LogActivity:Course.Delete','Course.Delete']]);
+
+// section
+$router->get($prefix.'/section', ['uses' => 'Section\SectionBrowseController@get', 'middleware' => ['LogActivity:Section.View','ArrQuery']]);
+$router->get($prefix.'/section/{query:.+}', ['uses' => 'Section\SectionBrowseController@get', 'middleware' => ['Section:Section.View','ArrQuery']]);
+$router->post($prefix.'/section', ['uses' => 'Section\SectionController@Insert', 'middleware' => ['LogActivity:Section.Insert','Section.Insert']]);
+$router->put($prefix.'/section/{id}', ['uses' => 'Section\SectionController@Update', 'middleware' => ['LogActivity:Section.Update','Section.Update']]);
+$router->delete($prefix.'/section/{id}', ['uses' => 'Section\SectionController@Delete', 'middleware' => ['LogActivity:Section.Delete','Section.Delete']]);
+
+// lecture
+$router->get($prefix.'/lecture', ['uses' => 'Lecture\LectureBrowseController@get', 'middleware' => ['LogActivity:Lecture.View','ArrQuery']]);
+$router->get($prefix.'/lecture/{query:.+}', ['uses' => 'Lecture\LectureBrowseController@get', 'middleware' => ['Lecture:Lecture.View','ArrQuery']]);
+$router->post($prefix.'/lecture', ['uses' => 'Lecture\LectureController@Insert', 'middleware' => ['LogActivity:Lecture.Insert','Lecture.Insert']]);
+$router->put($prefix.'/lecture/{id}', ['uses' => 'Lecture\LectureController@Update', 'middleware' => ['LogActivity:Lecture.Update','Lecture.Update']]);
+$router->delete($prefix.'/lecture/{id}', ['uses' => 'Lecture\LectureController@Delete', 'middleware' => ['LogActivity:Lecture.Delete','Lecture.Delete']]);
+
+// excercise
+$router->get($prefix.'/excercise', ['uses' => 'Excercise\ExcerciseBrowseController@get', 'middleware' => ['LogActivity:Excercise.View','ArrQuery']]);
+$router->get($prefix.'/excercise/{query:.+}', ['uses' => 'Excercise\ExcerciseBrowseController@get', 'middleware' => ['Excercise:Excercise.View','ArrQuery']]);
+$router->post($prefix.'/excercise', ['uses' => 'Excercise\ExcerciseController@Insert', 'middleware' => ['LogActivity:Excercise.Insert','Excercise.Insert']]);
+$router->put($prefix.'/excercise/{id}', ['uses' => 'Excercise\ExcerciseController@Update', 'middleware' => ['LogActivity:Excercise.Update','Excercise.Update']]);
+$router->delete($prefix.'/excercise/{id}', ['uses' => 'Excercise\ExcerciseController@Delete', 'middleware' => ['LogActivity:Excercise.Delete','Excercise.Delete']]);
+
+// excercise_type
+$router->get($prefix.'/excercise_type', ['uses' => 'ExcerciseType\ExcerciseTypeBrowseController@get', 'middleware' => ['LogActivity:ExcerciseType.View','ArrQuery']]);
+$router->get($prefix.'/excercise_type/{query:.+}', ['uses' => 'ExcerciseType\ExcerciseTypeBrowseController@get', 'middleware' => ['ExcerciseType:ExcerciseType.View','ArrQuery']]);
+$router->post($prefix.'/excercise_type', ['uses' => 'ExcerciseType\ExcerciseTypeController@Insert', 'middleware' => ['LogActivity:ExcerciseType.Insert','ExcerciseType.Insert']]);
+$router->put($prefix.'/excercise_type/{id}', ['uses' => 'ExcerciseType\ExcerciseTypeController@Update', 'middleware' => ['LogActivity:ExcerciseType.Update','ExcerciseType.Update']]);
+$router->delete($prefix.'/excercise_type/{id}', ['uses' => 'ExcerciseType\ExcerciseTypeController@Delete', 'middleware' => ['LogActivity:ExcerciseType.Delete','ExcerciseType.Delete']]);
+
+// excercise_options
+$router->get($prefix.'/excercise_options', ['uses' => 'ExcerciseOptions\ExcerciseOptionsBrowseController@get', 'middleware' => ['LogActivity:ExcerciseOptions.View','ArrQuery']]);
+$router->get($prefix.'/excercise_options/{query:.+}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsBrowseController@get', 'middleware' => ['ExcerciseOptions:ExcerciseOptions.View','ArrQuery']]);
+$router->post($prefix.'/excercise_options', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Insert', 'middleware' => ['LogActivity:ExcerciseOptions.Insert','ExcerciseOptions.Insert']]);
+$router->put($prefix.'/excercise_options/{id}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Update', 'middleware' => ['LogActivity:ExcerciseOptions.Update','ExcerciseOptions.Update']]);
+$router->delete($prefix.'/excercise_options/{id}', ['uses' => 'ExcerciseOptions\ExcerciseOptionsController@Delete', 'middleware' => ['LogActivity:ExcerciseOptions.Delete','ExcerciseOptions.Delete']]);
+
+// user_excercise
+$router->get($prefix.'/user_excercise', ['uses' => 'UserExcercise\UserExcerciseBrowseController@get', 'middleware' => ['LogActivity:UserExcercise.View','ArrQuery']]);
+$router->get($prefix.'/user_excercise/{query:.+}', ['uses' => 'UserExcercise\UserExcerciseBrowseController@get', 'middleware' => ['UserExcercise:UserExcercise.View','ArrQuery']]);
+$router->post($prefix.'/user_excercise', ['uses' => 'UserExcercise\UserExcerciseController@Insert', 'middleware' => ['LogActivity:UserExcercise.Insert','UserExcercise.Insert']]);
+$router->put($prefix.'/user_excercise/{id}', ['uses' => 'UserExcercise\UserExcerciseController@Update', 'middleware' => ['LogActivity:UserExcercise.Update','UserExcercise.Update']]);
+$router->delete($prefix.'/user_excercise/{id}', ['uses' => 'UserExcercise\UserExcerciseController@Delete', 'middleware' => ['LogActivity:UserExcercise.Delete','UserExcercise.Delete']]);
+
+// user_excercise_answer
+$router->get($prefix.'/user_excercise_answer', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerBrowseController@get', 'middleware' => ['LogActivity:UserExcerciseAnswer.View','ArrQuery']]);
+$router->get($prefix.'/user_excercise_answer/{query:.+}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerBrowseController@get', 'middleware' => ['UserExcerciseAnswer:UserExcerciseAnswer.View','ArrQuery']]);
+$router->post($prefix.'/user_excercise_answer', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Insert', 'middleware' => ['LogActivity:UserExcerciseAnswer.Insert','UserExcerciseAnswer.Insert']]);
+$router->put($prefix.'/user_excercise_answer/{id}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Update', 'middleware' => ['LogActivity:UserExcerciseAnswer.Update','UserExcerciseAnswer.Update']]);
+$router->delete($prefix.'/user_excercise_answer/{id}', ['uses' => 'UserExcerciseAnswer\UserExcerciseAnswerController@Delete', 'middleware' => ['LogActivity:UserExcerciseAnswer.Delete','UserExcerciseAnswer.Delete']]);
