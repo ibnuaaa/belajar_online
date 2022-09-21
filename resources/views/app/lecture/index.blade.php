@@ -14,8 +14,8 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb simple">
             <li class="breadcrumb-item"><a href="#" class="theme-cl">Home</a></li>
-            <li class="breadcrumb-item"><a href="#" class="theme-cl">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Programming with Laravel: HandsOn introduction for beginners</li>
+            <li class="breadcrumb-item"><a href="#" class="theme-cl">Course</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ $lecture->section->course->name }}</li>
           </ol>
         </nav>
       </div>
@@ -26,20 +26,8 @@
       <div class="col-lg-8 col-md-8">
 
         <div class="inline_edu_wraps mb-4">
-          <h2>Programming with Advance Laravel: HandsOn Introduction for beginners</h2>
-          <div class="ed_rate_info">
-            <span class="mr-2 text-danger bg-light-danger px-2 py-1 rounded">Programming</span>
-            <div class="review_counter mr-2">
-              <strong class="good">4.5</strong>
-            </div>
-            <div class="star_info">
-              <i class="fas fa-star filled"></i>
-              <i class="fas fa-star filled"></i>
-              <i class="fas fa-star filled"></i>
-              <i class="fas fa-star filled"></i>
-              <i class="fas fa-star"></i>
-            </div>
-          </div>
+          <h2>{{ $lecture->section->course->name }}</h2>
+
         </div>
 
         <div class="inline_edu_wrap">
@@ -52,25 +40,20 @@
                 </li>
                 <li>
                   <span>Level</span>
-                  Basic
+                  Kelas XI
                 </li>
                 <li>
                   <span>Students</span>
-                  742,614
-                </li>
-                <li>
-                  <span>Language</span>
-                  Hindi
+                  20
                 </li>
               </ul>
             </div>
           </div>
           <div class="inline_edu_last">
-            <a href="#" class="btn btn-light"><i class="fa fa-heart mr-2"></i>Wishlist</a>
           </div>
         </div>
 
-        @if ($id == 2)
+        @if ($id == 2123123)
         <div class="property_video xl mb-4">
           <div class="thumb">
             <img class="pro_img img-fluid w100" src="https://via.placeholder.com/1200x900" alt="7.jpg">
@@ -90,17 +73,17 @@
 
         <!-- Overview -->
         <div class="edu_wraper border">
-          <h4 class="edu_title">Course Overview</h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-          <h6>Requirements</h6>
-          <ul class="lists-3">
-            <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-            <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-            <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-            <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-            <li>At vero eos et accusamus et iusto odio dignissimos ducimus</li>
-          </ul>
+
+          @if (!empty($lecture->foto_lecture))
+
+          <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
+
+          @endif
+
+          <br><br>
+
+          {{$lecture->description}}
+
         </div>
 
         <div class="edu_wraper border">
@@ -354,4 +337,9 @@
 <!-- ============================ Course Detail ================================== -->
 
 
+@endsection
+
+
+@section('script')
+@include('app.lecture.scripts.form')
 @endsection

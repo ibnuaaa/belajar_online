@@ -17,4 +17,9 @@ class Section extends Model
     {
         return $this->hasMany(Lecture::class, 'section_id', 'id');
     }
+
+    public function course()
+    {
+        return $this->hasOne(Course::class, 'id', 'course_id');
+    }
 }

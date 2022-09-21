@@ -46,6 +46,10 @@
 
 					<div class="row">
 
+
+
+						@foreach ($course as $key => $val)
+
 						<!-- Cource Grid 1 -->
 						<div class="col-lg-4 col-md-6 col-sm-12">
 							<div class="education_block_grid style_2">
@@ -55,33 +59,14 @@
 								</div>
 
 								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">Tableau For Beginners: Get CA Certified, Grow Your Career</a></h4>
+									<h4 class="bl-title"><a href="/f/course/{{ $val->id }}">{{ $val->name }}</a></h4>
 								</div>
 
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
-
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>1,84684 Views</strong></li>
-											<li class="theme-cl">3h 30min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
 
 								<div class="education_block_footer">
 									<div class="education_block_author">
 										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Shaurya Preet</a></h5>
+										<h5><a href="#">Shaurya Preet</a></h5>
 									</div>
 									<span class="education_block_time"><i class="ti-calendar mr-1"></i>1 hour ago</span>
 								</div>
@@ -89,220 +74,11 @@
 							</div>
 						</div>
 
-						<!-- Cource Grid 1 -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="education_block_grid style_2">
+						@endforeach
 
-								<div class="education_block_thumb n-shadow">
-									<a href="/f/course/1"><img src="/frontend/assets/img/co-2.jpg" class="img-fluid" alt=""></a>
-								</div>
 
-								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">The Complete Business Plan Course (Includes 50 Templates)</a></h4>
-								</div>
 
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
 
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>2,25684 Views</strong></li>
-											<li class="theme-cl">4h 30min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
-
-								<div class="education_block_footer">
-									<div class="education_block_author">
-										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Savitha Tripathi</a></h5>
-									</div>
-									<span class="education_block_time"><i class="ti-calendar mr-1"></i>20 min ago</span>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Cource Grid 1 -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="education_block_grid style_2">
-
-								<div class="education_block_thumb n-shadow">
-									<a href="/f/course/1"><img src="/frontend/assets/img/co-3.jpg" class="img-fluid" alt=""></a>
-								</div>
-
-								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">An Entire MBA In 1 Course:Award Winning Business School Prof</a></h4>
-								</div>
-
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
-
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>5,69684 Views</strong></li>
-											<li class="theme-cl">5h 32min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
-
-								<div class="education_block_footer">
-									<div class="education_block_author">
-										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Shaurya Preet</a></h5>
-									</div>
-									<span class="education_block_time"><i class="ti-calendar mr-1"></i>1 days ago</span>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Cource Grid 1 -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="education_block_grid style_2">
-
-								<div class="education_block_thumb n-shadow">
-									<a href="/f/course/1"><img src="/frontend/assets/img/co-4.jpg" class="img-fluid" alt=""></a>
-								</div>
-
-								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">The Complete Financial Analyst Course 2020</a></h4>
-								</div>
-
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
-
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>7,42854 Views</strong></li>
-											<li class="theme-cl">6h 30min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
-
-								<div class="education_block_footer">
-									<div class="education_block_author">
-										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Litha Maildick</a></h5>
-									</div>
-									<span class="education_block_time"><i class="ti-calendar mr-1"></i>1 days ago</span>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Cource Grid 1 -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="education_block_grid style_2">
-
-								<div class="education_block_thumb n-shadow">
-									<a href="/f/course/1"><img src="/frontend/assets/img/co-5.jpg" class="img-fluid" alt=""></a>
-								</div>
-
-								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">PMP Exam Prep Seminar - PMBOK Guide 6</a></h4>
-								</div>
-
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
-
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>5,32984 Views</strong></li>
-											<li class="theme-cl">5h 50min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
-
-								<div class="education_block_footer">
-									<div class="education_block_author">
-										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Chrish Gyle</a></h5>
-									</div>
-									<span class="education_block_time"><i class="ti-calendar mr-1"></i>2 days ago</span>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Cource Grid 1 -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="education_block_grid style_2">
-
-								<div class="education_block_thumb n-shadow">
-									<a href="/f/course/1"><img src="/frontend/assets/img/co-6.jpg" class="img-fluid" alt=""></a>
-								</div>
-
-								<div class="education_block_body">
-									<h4 class="bl-title"><a href="/f/course/1">Tableau 2020 A-Z:Hands-On Tableau Training For Data Science!</a></h4>
-								</div>
-
-								<div class="cources_facts">
-									<ul class="cources_facts_list">
-										<li class="facts-1">Expert</li>
-										<li class="facts-2">Professional</li>
-										<li class="facts-5">Design</li>
-									</ul>
-								</div>
-
-								<div class="cources_info">
-									<div class="cources_info_first">
-										<ul>
-											<li><strong>6,56684 Views</strong></li>
-											<li class="theme-cl">6h 40min</li>
-										</ul>
-									</div>
-									<div class="cources_info_last">
-
-									</div>
-								</div>
-
-								<div class="education_block_footer">
-									<div class="education_block_author">
-										<div class="path-img"><a href="instructor-detail.html"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a></div>
-										<h5><a href="instructor-detail.html">Shilpa Shekh</a></h5>
-									</div>
-									<span class="education_block_time"><i class="ti-calendar mr-1"></i>4 days ago</span>
-								</div>
-
-							</div>
-						</div>
 
 
 					</div>

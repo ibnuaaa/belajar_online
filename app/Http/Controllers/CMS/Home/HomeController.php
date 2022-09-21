@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Auth;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
+use App\Models\Course;
+use App\Models\Section;
+use App\Models\Lecture;
+
 class HomeController extends Controller
 {
     public function Home(Request $request)
@@ -40,8 +44,10 @@ class HomeController extends Controller
 
     public function HomeBase(Request $request)
     {
-
-        return view('app.home.index');
+        $Course = Course::all();
+        return view('app.home.index',[
+          'course' => $Course
+        ]);
     }
 
     public function Dashboard(Request $request)
@@ -81,21 +87,40 @@ class HomeController extends Controller
     public function Course(Request $request, $id)
     {
 
-        return view('app.course.index');
+        $Course = Course::where('id', $id)->first();
+
+        $Section = Section::where('course_id', $id)
+                    ->with('lecture')
+                    ->get();
+
+        return view('app.course.index', [
+          'course' => $Course,
+          'section' => $Section
+        ]);
     }
 
     public function Lecture(Request $request, $id)
     {
 
-        if ($id == 3 || $id == 4) {
-          return view('app.exercise.index', [
-            'id' => $id
-          ]);
-        } else {
+          $Lecture = Lecture::where('id', $id)
+                      ->with('section')
+                      ->with('foto_lecture')
+
+                      ->first();
+
+
+
+          $Section = Section::where('course_id', $Lecture->section->course_id)
+                      ->with('lecture')
+                      ->get();
+
+
           return view('app.lecture.index', [
-            'id' => $id
+            'id' => $id,
+            'section' => $Section,
+            'lecture' => $Lecture
           ]);
-        }
+
     }
 
     public function Question(Request $request)

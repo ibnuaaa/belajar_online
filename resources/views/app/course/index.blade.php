@@ -27,29 +27,16 @@
 						<li class="facts-5">Design</li>
 					</ul>
 					<div class="ed_header_caption">
-						<h2 class="ed_title">Ruby on Rails Program</h2>
+						<h2 class="ed_title">{{ $course->name }}</h2>
 						<ul>
-							<li><i class="ti-calendar"></i>10 - 20 weeks</li>
-							<li><i class="ti-control-forward"></i>102 Lectures</li>
-							<li><i class="ti-user"></i>502 Student Enrolled</li>
+							<li><i class="ti-calendar"></i>1 Februari 2022</li>
+							<li><i class="ti-user"></i> Oleh Admin</li>
 						</ul>
 					</div>
 					<div class="ed_header_short">
 						<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore. veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 					</div>
 
-					<div class="ed_rate_info">
-						<div class="star_info">
-							<i class="fas fa-star filled"></i>
-							<i class="fas fa-star filled"></i>
-							<i class="fas fa-star filled"></i>
-							<i class="fas fa-star filled"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<div class="review_counter">
-							<strong class="high">4.7</strong> 3572 Reviews
-						</div>
-					</div>
 
 				</div>
 			</div>
