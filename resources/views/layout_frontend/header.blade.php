@@ -48,69 +48,19 @@
 
               $category = [
                 [
-                  'name' => 'Development',
+                  'name' => 'Kelas X',
                   'category' => [
-                    'Web Development',
-                    'Mobile Development',
-                    'Programming Languages',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-
+                    'Teknik Pengolahan Audio dan Video',
+                    'Desain Media Interaktif'
                   ]
                 ],
                 [
-                  'name' => 'IT & Software',
-                  'category' => [
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-
-                  ]
+                  'name' => 'Kelas XI',
+                  'category' => []
                 ],
                 [
-                  'name' => 'Design',
-                  'category' => [
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-
-                  ]
-                ],
-                [
-                  'name' => 'Marketing',
-                  'category' => [
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-
-                  ]
-                ],
-                [
-                  'name' => 'Photography',
-                  'category' => [
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-                    'xxxxxxxx',
-
-                  ]
+                  'name' => 'Kelas XII',
+                  'category' => []
                 ]
               ];
 
@@ -119,10 +69,10 @@
 
 							<ul class="nav-menu">
 
-								<li class="active"><a href="/">Home</a>
+								<li class="active"><a href="/">Beranda</a>
 								</li>
 
-								<li><a href="#">Courses<span class="submenu-indicator"></span></a>
+								<li><a href="#">Modul Belajar<span class="submenu-indicator"></span></a>
 									<ul class="nav-dropdown nav-submenu">
 
                     @foreach ($category as $key => $val)
@@ -140,15 +90,15 @@
 
 
 
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact">Kontak</a></li>
+                <li><a href="/about_us">Tentang Kami</a></li>
 
 							</ul>
 
 							<ul class="nav-menu nav-menu-social align-to-right">
 								<li class="login_click search">
 									<form class="form-inline addons">
-										<input class="form-control" type="search" placeholder="Search Courses" aria-label="Search">
+										<input class="form-control" type="search" placeholder="Cari Modul Belajar" aria-label="Cari..">
 										<button class="btn my-2 my-sm-0" type="submit"><i class="ti-search"></i></button>
 									</form>
 								</li>

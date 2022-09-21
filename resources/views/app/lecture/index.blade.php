@@ -13,8 +13,8 @@
       <div class="col-lg-12 col-md-12">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb simple">
-            <li class="breadcrumb-item"><a href="#" class="theme-cl">Home</a></li>
-            <li class="breadcrumb-item"><a href="#" class="theme-cl">Course</a></li>
+            <li class="breadcrumb-item"><a href="/home" class="theme-cl">Beranda</a></li>
+            <li class="breadcrumb-item"><a href="/f/course/{{ $lecture->section->course->id }}" class="theme-cl">Materi Pembelajaran</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ $lecture->section->course->name }}</li>
           </ol>
         </nav>
@@ -35,15 +35,15 @@
             <div class="instructor_dark_info">
               <ul>
                 <li>
-                  <span>Last Update</span>
-                  10 Jan 2022
+                  <span>Update Terakhir</span>
+                  {{ $lecture->created_at }}
                 </li>
                 <li>
-                  <span>Level</span>
-                  Kelas XI
+                  <span>Tingkatan</span>
+                  Kelas XII
                 </li>
                 <li>
-                  <span>Students</span>
+                  <span>Jumlah Siswa</span>
                   20
                 </li>
               </ul>
@@ -279,52 +279,18 @@
         <div class="ed_view_box style_3 border py-3">
 
 
-          <div class="ed_view_short pl-4 pr-4 pb-2 b-b">
-            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-
-          <div class="p-4">
-            <h5>Course Features Include</h5>
-            <ul class="edu_list right">
-              <li><i class="ti-user"></i>Student Enrolled:<strong>1740</strong></li>
-              <li><i class="ti-files"></i>lectures:<strong>10</strong></li>
-              <li><i class="ti-game"></i>Quizzes:<strong>4</strong></li>
-              <li><i class="ti-time"></i>Duration:<strong>60 hours</strong></li>
-              <li><i class="ti-tag"></i>Skill Level:<strong>Beginner</strong></li>
-              <li><i class="ti-flag-alt"></i>Language:<strong>English</strong></li>
-              <li><i class="ti-shine"></i>Assessment:<strong>Yes</strong></li>
-            </ul>
-          </div>
 
           <div class="px-4 pt-4 pb-0 b-t">
-            <h5 class="mb-3">About The instructor</h5>
+            <h5 class="mb-3">Tentang Pengajar</h5>
             <div class="ins_info">
-              <div class="ins_info_thumb">
-                <img src="/frontend/assets/img/user-5.jpg" class="img-fluid" alt="">
-              </div>
+
               <div class="ins_info_caption">
-                <h4 class="text-dark">Dr. Mahimpurra Ville</h4>
-                <span class="text-dark">Founder of LearnUp</span>
+                <h4 class="text-dark">Muktiari Ayu Winasis</h4>
+                <span class="text-dark">Pengajar Multimedia Kelas XII</span>
               </div>
             </div>
             <div class="inline_edu_wrap mt-4">
-              <div class="inline_edu_first">
-                <div class="ed_rate_info">
-                  <div class="review_counter mr-2">
-                    <strong class="good">4.5</strong>
-                  </div>
-                  <div class="star_info">
-                    <i class="fas fa-star filled"></i>
-                    <i class="fas fa-star filled"></i>
-                    <i class="fas fa-star filled"></i>
-                    <i class="fas fa-star filled"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="inline_edu_last">
-                <i class="fa fa-file mr-2"></i>42 Lectures
-              </div>
+
             </div>
           </div>
 

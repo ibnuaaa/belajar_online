@@ -23,13 +23,12 @@
 			<div class="col-lg-8 col-md-7">
 				<div class="ed_detail_wrap">
 					<ul class="cources_facts_list">
-						<li class="facts-1">SEO</li>
-						<li class="facts-5">Design</li>
+						<li class="facts-1">Kelas XII</li>
 					</ul>
 					<div class="ed_header_caption">
 						<h2 class="ed_title">{{ $course->name }}</h2>
 						<ul>
-							<li><i class="ti-calendar"></i>1 Februari 2022</li>
+							<li><i class="ti-calendar"></i>{{ $course->created_at }}</li>
 							<li><i class="ti-user"></i> Oleh Admin</li>
 						</ul>
 					</div>
@@ -243,30 +242,15 @@
 				<div class="ed_view_box style_2">
 
 					<div class="ed_author">
-						<div class="ed_author_thumb">
-							<img class="img-fluid" src="/frontend/assets/img/user-5.jpg" alt="">
-						</div>
 						<div class="ed_author_box">
-							<h4>Michael Russell</h4>
-							<span>Web Designer in Canada</span>
+							<h4>Muktiari Ayu Winasis</h4>
+							<span>Pengajar Multimedia Kelas XII</span>
 						</div>
 					</div>
 
 
 				</div>
 
-				<div class="edu_wraper">
-					<h4 class="edu_title">Course Features</h4>
-					<ul class="edu_list right">
-						<li><i class="ti-user"></i>Student Enrolled:<strong>1740</strong></li>
-						<li><i class="ti-files"></i>lectures:<strong>10</strong></li>
-						<li><i class="ti-game"></i>Quizzes:<strong>4</strong></li>
-						<li><i class="ti-time"></i>Duration:<strong>60 hours</strong></li>
-						<li><i class="ti-tag"></i>Skill Level:<strong>Beginner</strong></li>
-						<li><i class="ti-flag-alt"></i>Language:<strong>English</strong></li>
-						<li><i class="ti-shine"></i>Assessment:<strong>Yes</strong></li>
-					</ul>
-				</div>
 
 			</div>
 

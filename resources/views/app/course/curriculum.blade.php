@@ -1,7 +1,7 @@
 
 
 
-					<h4 class="edu_title">Course Circullum</h4>
+					<h4 class="edu_title">Materi Pembelajaran</h4>
 					<div id="accordionExample" class="accordion shadow circullum">
 
 
