@@ -18,6 +18,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Section;
 use App\Models\Lecture;
+use App\Models\UserLecture;
 use App\Models\Document;
 
 
@@ -130,6 +131,28 @@ class CourseController extends Controller
         return view('app.cms.course.lecture.index', [
           'id' => $id,
           'lecture' => $Lecture
+        ]);
+    }
+
+    public function Rank(Request $request, $id){
+
+        $Lecture = Lecture::where('id', $id)
+                ->first();
+
+
+        $UserLecture = UserLecture::where('lecture_id', $id)
+                ->with('user')
+                ->orderBy('nilai', 'DESC')
+                ->get();
+
+
+        // cetak($UserLecture);
+        // die();
+
+        return view('app.cms.course.rank.index', [
+          'id' => $id,
+          'lecture' => $Lecture,
+          'user_lecture' => $UserLecture
         ]);
     }
 

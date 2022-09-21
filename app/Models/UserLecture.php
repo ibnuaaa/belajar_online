@@ -12,4 +12,9 @@ class UserLecture extends Model
 {
     use SoftDeletes;
     protected $table = 'user_lecture';
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
+    }
 }

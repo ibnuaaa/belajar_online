@@ -108,8 +108,9 @@
                                           </td>
                                           <td>
                                               <div class="btn-group">
-                                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteLecture('{{$val2->id}}');"><i class="fa fa-trash"></i></a>
-                                                  <a href="/course/lecture/{{ $val2->id }}" class="btn btn-success btn-sm" ><i class="fa fa-edit"></i></a>
+                                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteLecture('{{$val2->id}}');"><i class="fa fa-trash"></i> Hapus</a>
+                                                  <a href="/course/lecture/{{ $val2->id }}" class="btn btn-success btn-sm" ><i class="fa fa-eye"></i> Detail</a>
+                                                  <a href="/course/lecture/{{ $val2->id }}/rank" class="btn btn-primary btn-sm" ><i class="fa fa-child"></i> Peringkat</a>
                                               </div>
                                           </td>
                                       </tr>
@@ -125,7 +126,7 @@
                                   </table>
                               </td>
                               <td>
-                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteSection('{{$val->id}}');"><i class="fa fa-trash"></i></a>
+                                  <a href="#" class="btn btn-danger btn-sm" onclick="return deleteSection('{{$val->id}}');"><i class="fa fa-trash"></i> Hapus</a>
                               </td>
                           </tr>
                           @endforeach
