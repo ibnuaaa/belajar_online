@@ -28,6 +28,10 @@
                         <label class="form-label">Nama</label>
                         <input name="name" value="{{ $data['name'] }}" class="form-control" type="text" required>
                     </div>
+                    <div class="form-group form-group-default required ">
+                        <label class="form-label">Tujuan</label>
+                        <input name="description" value="{{ $data['description'] }}" class="form-control" type="text" required>
+                    </div>
                 </form>
             </div>
         </div>

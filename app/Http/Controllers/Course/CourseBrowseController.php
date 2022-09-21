@@ -70,6 +70,7 @@ class CourseBrowseController extends Controller
             // Course
             "$this->CourseTable.id as Course.id",
             "$this->CourseTable.name as Course.name",
+            "$this->CourseTable.description as Course.description",
             "$this->CourseTable.created_at as Course.created_at"
         );
 

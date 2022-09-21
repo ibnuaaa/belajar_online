@@ -23,9 +23,11 @@ $(document).ready(function() {
         editCourseForm.validate().then(function(status) {
             if (status === 'Valid') {
                 const name = $('input[name="name"]')
+                const description = $('input[name="description"]')
 
                 const data = {
                     name: name.val(),
+                    description: description.val(),
                 }
 
                 axios.put('/course/{{$data['id']}}', data).then((response) => {

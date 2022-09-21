@@ -16,7 +16,8 @@ class Update extends BaseMiddleware
     {
         $this->Model->Course = Course::where('id', $this->Id)->first();
         if ($this->Model->Course) {
-            $this->Model->Course->name = $this->_Request->input('name');
+          $this->Model->Course->name = $this->_Request->input('name');
+          $this->Model->Course->description = $this->_Request->input('description');
         }
     }
 
