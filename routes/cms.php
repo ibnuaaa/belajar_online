@@ -21,6 +21,7 @@ $router->get('/category/{id}', 'CMS\Category\CategoryController@Detail');
 // course
 $router->get('/course', 'CMS\Course\CourseController@Home');
 $router->get('/course/new', 'CMS\Course\CourseController@New');
+$router->get('/course/gallery', 'CMS\Course\CourseController@Gallery');
 $router->get('/course/edit/{id}', 'CMS\Course\CourseController@Edit');
 $router->get('/course/lecture/{id}', 'CMS\Course\CourseController@Lecture');
 $router->get('/course/{id}', 'CMS\Course\CourseController@Detail');

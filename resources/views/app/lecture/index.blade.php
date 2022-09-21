@@ -74,15 +74,17 @@
         <!-- Overview -->
         <div class="edu_wraper border">
 
+          {!!$lecture->description!!}
+
+          <br><br>
+
           @if (!empty($lecture->foto_lecture))
 
           <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
 
           @endif
 
-          <br><br>
 
-          {{$lecture->description}}
 
         </div>
 

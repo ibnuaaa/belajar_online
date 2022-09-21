@@ -18,6 +18,8 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Section;
 use App\Models\Lecture;
+use App\Models\Document;
+
 
 use Illuminate\Support\Facades\Auth;
 
@@ -106,6 +108,16 @@ class CourseController extends Controller
           'id' => $id,
           'data' => $data->original['data']['records'],
           'section' => $Section
+        ]);
+    }
+
+    public function Gallery(Request $request)
+    {
+
+        $data = Document::where('object', 'gallery')->get();
+
+        return view('app.cms.course.gallery.index', [
+          'data' => $data
         ]);
     }
 
