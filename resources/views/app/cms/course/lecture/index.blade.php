@@ -45,6 +45,22 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-6 col-md-2">
+                        Upload PDF
+                    </div>
+                    <div class="col-6 col-md-10">
+                        <input type="file" onchange="prepareUpload(this, 'lecture', '{{ $lecture->id }}', false, ['pdf']);" multiple>
+
+
+                        @if (!empty($lecture->foto_lecture))
+
+                        <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
+
+                        @endif
+
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 col-md-2">
                         Video
                     </div>
                     <div class="col-6 col-md-10">

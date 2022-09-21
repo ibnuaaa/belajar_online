@@ -18,4 +18,11 @@ class Lecture extends Model
         return $this->hasMany(Exercise::class, 'lecture_id', 'id')->with('exercise_option');
     }
 
+    public function foto_lecture()
+    {
+        return $this->hasOne(Document::class, 'object_id', 'id')
+                    ->where('object', 'lecture')
+                    ->with('storage');
+    }
+
 }
