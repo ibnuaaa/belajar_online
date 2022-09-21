@@ -16,7 +16,8 @@ class Update extends BaseMiddleware
     {
         $this->Model->ExerciseOption = ExerciseOption::where('id', $this->Id)->first();
         if ($this->Model->ExerciseOption) {
-            $this->Model->ExerciseOption->name = $this->_Request->input('name');
+          if(!empty($this->_Request->input('name'))) $this->Model->ExerciseOption->name = $this->_Request->input('name');
+          if(!empty($this->_Request->input('is_answer'))) $this->Model->ExerciseOption->is_answer = $this->_Request->input('is_answer');
         }
     }
 
