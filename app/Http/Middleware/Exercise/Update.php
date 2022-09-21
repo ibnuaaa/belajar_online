@@ -22,18 +22,18 @@ class Update extends BaseMiddleware
 
     private function Validation()
     {
-        $validator = Validator::make($this->_Request->all(), [
-            'name' => 'required'
-        ]);
-        if (!$this->Model->Exercise) {
-            $this->Json::set('exception.key', 'NotFoundExercise');
-            $this->Json::set('exception.message', trans('validation.'.$this->Json::get('exception.key')));
-            return false;
-        }
-        if ($validator->fails()) {
-            $this->Json::set('errors', $validator->errors());
-            return false;
-        }
+        // $validator = Validator::make($this->_Request->all(), [
+        //     'name' => 'required'
+        // ]);
+        // if (!$this->Model->Exercise) {
+        //     $this->Json::set('exception.key', 'NotFoundExercise');
+        //     $this->Json::set('exception.message', trans('validation.'.$this->Json::get('exception.key')));
+        //     return false;
+        // }
+        // if ($validator->fails()) {
+        //     $this->Json::set('errors', $validator->errors());
+        //     return false;
+        // }
         return true;
     }
 

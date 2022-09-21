@@ -62,19 +62,25 @@
                             <tr>
                                 <td>
                                     Soal :
-                                    <textarea name="name" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise(this, {{$value->id}});">{{ $value->name }}</textarea>
+                                    <textarea name="name" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise({{$value->id}}, this);">{{ $value->name }}</textarea>
                                     <br>
                                     Pilihan
                                     <table class="table table-bordered table-sm">
                                         @foreach ($value->exercise_option as $key2 => $value2)
                                         <tr>
-                                            <td>
+                                            <td style="width: 80%;">
                                                 <input name="name" type="text" class="form-control" value="{{ $value2->name }}" onchange="saveEditExcerciseOption({{ $value2->id }}, this);" >
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <input name="is_answer" type="text" class="form-control" value="{{ $value2->is_answer }}" onchange="saveEditExcerciseOption({{ $value2->id }}, this);" >
+                                            </td>
+                                            <td style="width: 10%;">
+                                                <a href="#" class="btn btn-danger btn-sm" onclick="return deleteExerciseOption('{{$value2->id}}');"><i class="fa fa-trash"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
                                         <tr>
-                                            <td>
+                                            <td colspan="3">
                                                 <a href="#" class="btn btn-primary btn-sm" onClick="return saveNewExerciseOption({{$value->id}});">Tambah Pilihan</a>
                                             </td>
                                         </tr>
@@ -83,7 +89,7 @@
                                 </td>
 
                                 <td>
-
+                                    <a href="#" class="btn btn-danger btn-sm" onclick="return deleteExercise('{{$value->id}}');"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach
@@ -93,7 +99,7 @@
 
 
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <br>
                                     <a href="#" class="btn btn-primary btn-sm" onClick="return saveNewExercise({{$id}});">Tambah Soal</a>
                                 </td>

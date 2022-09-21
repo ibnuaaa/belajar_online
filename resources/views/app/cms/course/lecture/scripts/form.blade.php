@@ -54,7 +54,7 @@ function saveEditExcercise(id, e) {
   }
 
   $(e).addClass('loadingField')
-  axios.post('/exercise/' + id, data).then((response) => {
+  axios.put('/exercise/' + id, data).then((response) => {
       // location.reload()
       $(e).removeClass('loadingField')
   }).catch((error) => {
@@ -96,9 +96,14 @@ function saveNewExerciseOption(id) {
 
 function saveEditExcerciseOption(id, e) {
 
-    var data = {
-      name: $(e).val()
-    }
+    var field = $(e).attr('name')
+
+    var data = new Object;
+    data[field] = $(e).val();
+
+    // var data = {
+    //   name: $(e).val()
+    // }
 
     $(e).addClass('loadingField')
     axios.put('/exercise_option/'+id, data).then((response) => {
@@ -111,6 +116,30 @@ function saveEditExcerciseOption(id, e) {
     })
 
     return false;
+}
+
+function deleteExercise(id) {
+  axios.delete('/exercise/' + id).then((response) => {
+      location.reload()
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
+}
+
+function deleteExerciseOption(id) {
+  axios.delete('/exercise_option/' + id).then((response) => {
+      location.reload()
+  }).catch((error) => {
+      if (Boolean(error) && Boolean(error.response) && Boolean(error.response.data) && Boolean(error.response.data.exception) && Boolean(error.response.data.exception.message)) {
+          swal({ title: 'Opps!', text: error.response.data.exception.message, type: 'error', confirmButtonText: 'Ok' })
+      }
+  })
+
+  return false;
 }
 
 
