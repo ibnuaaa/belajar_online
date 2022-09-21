@@ -135,3 +135,10 @@ $router->get($prefix.'/user_exercise_answer/{query:.+}', ['uses' => 'UserExercis
 $router->post($prefix.'/user_exercise_answer', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Insert', 'middleware' => ['LogActivity:UserExerciseAnswer.Insert','UserExerciseAnswer.Insert']]);
 $router->put($prefix.'/user_exercise_answer/{id}', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Update', 'middleware' => ['LogActivity:UserExerciseAnswer.Update','UserExerciseAnswer.Update']]);
 $router->delete($prefix.'/user_exercise_answer/{id}', ['uses' => 'UserExerciseAnswer\UserExerciseAnswerController@Delete', 'middleware' => ['LogActivity:UserExerciseAnswer.Delete','UserExerciseAnswer.Delete']]);
+
+// user_lecture
+$router->get($prefix.'/user_lecture', ['uses' => 'UserLecture\UserLectureBrowseController@get', 'middleware' => ['ArrQuery']]);
+$router->get($prefix.'/user_lecture/{query:.+}', ['uses' => 'UserLecture\UserLectureBrowseController@get', 'middleware' => ['ArrQuery']]);
+$router->post($prefix.'/user_lecture', ['uses' => 'UserLecture\UserLectureController@Insert', 'middleware' => ['LogActivity:UserLecture.Insert','UserLecture.Insert']]);
+$router->put($prefix.'/user_lecture/{id}', ['uses' => 'UserLecture\UserLectureController@Update', 'middleware' => ['LogActivity:UserLecture.Update','UserLecture.Update']]);
+$router->delete($prefix.'/user_lecture/{id}', ['uses' => 'UserLecture\UserLectureController@Delete', 'middleware' => ['LogActivity:UserLecture.Delete','UserLecture.Delete']]);

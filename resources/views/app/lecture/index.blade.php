@@ -81,6 +81,7 @@
 
           <br><br>
           <a onclick="return jawab();" id="btn-jawab" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
+          <a onclick="return getScore();" id="btn-cek-nilai" style="display:none;" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Cek Nilai</a>
 
           <div id="pembahasan_soal">
           </div>
