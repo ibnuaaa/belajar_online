@@ -13,7 +13,7 @@
 
 				<div class="property_video">
 					<div class="thumb">
-						<img class="pro_img img-fluid w100" src="/frontend/assets/img/ruby.png" alt="7.jpg">
+						<img class="pro_img img-fluid w100" src="/frontend/assets/img/foto.png" alt="7.jpg">
 
 					</div>
 				</div>
@@ -56,7 +56,7 @@
 				</div>
 
 				<!-- Reviews -->
-				<div class="rating-overview">
+				<div class="rating-overview" style="display:none;">
 					<div class="rating-overview-box">
 						<span class="rating-overview-box-total">4.2</span>
 						<span class="rating-overview-box-percent">out of 5.0</span>
@@ -105,7 +105,7 @@
 				</div>
 
 				<!-- instructor -->
-				<div class="single_instructor">
+				<div class="single_instructor" style="display:none;">
 					<div class="single_instructor_thumb">
 						<a href="#"><img src="https://via.placeholder.com/500x500" class="img-fluid" alt=""></a>
 					</div>
@@ -238,22 +238,24 @@
 
 			<!-- Sidebar -->
 			<div class="col-lg-4 col-md-4">
-
 				<div class="ed_view_box style_2">
 
-					<div class="ed_author">
-						<div class="ed_author_box">
-							<h4>Muktiari Ayu Winasis</h4>
-							<span>Pengajar Multimedia Kelas XII</span>
-						</div>
+					<div class="p-4">
+							<h5>Course Features Include</h5>
+							<ul class="edu_list right">
+									<li><i class="ti-tag"></i>Kelas:<strong>XII</strong></li>
+									<li><i class="ti-user"></i>Jumlah Siswa:<strong>20</strong></li>
+									<li><i class="ti-files"></i>Pengajar:<strong>1</strong></li>
+									<li><i class="ti-game"></i>Kuis:<strong>20</strong></li>
+									<li><i class="ti-time"></i>Durasi Mengajar:<strong>90 Menit</strong></li>
+									<li><i class="ti-flag-alt"></i>Bahasa:<strong>Indonesia</strong></li>
+									<li><i class="ti-shine"></i>Assessment:<strong>Ya</strong></li>
+							</ul>
 					</div>
 
 
 				</div>
-
-
 			</div>
-
 		</div>
 	</div>
 </section>
