@@ -96,12 +96,11 @@
 							</ul>
 
 							<ul class="nav-menu nav-menu-social align-to-right">
-								<li class="login_click search">
-									<form class="form-inline addons">
-										<input class="form-control" type="search" placeholder="Cari Modul Belajar" aria-label="Cari..">
-										<button class="btn my-2 my-sm-0" type="submit"><i class="ti-search"></i></button>
-									</form>
+								@if (!empty(MyAccount()->name))
+								<li class="login_click" style="background: none;">
+										<a style="color:black !important;">Selamat datang, {{ MyAccount()->name }}</a>
 								</li>
+								@endif
 								<li class="login_click bg-red">
                   @if (empty(MyAccount()->id))
                   <a href="/signin" >Masuk</a>
