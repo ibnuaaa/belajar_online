@@ -49,10 +49,7 @@
               $category = [
                 [
                   'name' => 'Kelas X',
-                  'category' => [
-                    'Teknik Pengolahan Audio dan Video',
-                    'Desain Media Interaktif'
-                  ]
+                  'category' => []
                 ],
                 [
                   'name' => 'Kelas XI',
@@ -60,7 +57,10 @@
                 ],
                 [
                   'name' => 'Kelas XII',
-                  'category' => []
+                  'category' => [
+                    'Teknik Pengolahan Audio dan Video',
+                    'Desain Media Interaktif'
+                  ]
                 ]
               ];
 
