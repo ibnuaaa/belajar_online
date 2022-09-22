@@ -13,7 +13,7 @@
 
 				<div class="property_video">
 					<div class="thumb">
-						<img class="pro_img img-fluid w100" src="/frontend/assets/img/foto.png" alt="7.jpg">
+						<img class="pro_img img-fluid w100" src="/frontend/assets/img/foto2.jpg" alt="7.jpg">
 
 					</div>
 				</div>
