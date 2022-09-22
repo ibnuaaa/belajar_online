@@ -18,6 +18,8 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use App\Models\Course;
 use App\Models\Section;
 use App\Models\Lecture;
+use App\Models\UserLecture;
+
 
 class HomeController extends Controller
 {
@@ -106,10 +108,17 @@ class HomeController extends Controller
     public function Lecture(Request $request, $id)
     {
 
+          $UserLecture = UserLecture::where('user_id', MyAccount()->id)->where('lecture_id',$id)->first();
+          if (empty($UserLecture)) {
+              $UserLecture = new UserLecture();
+              $UserLecture->lecture_id  = $id;
+              $UserLecture->user_id  = MyAccount()->id;
+          }
+          $UserLecture->save();
+
           $Lecture = Lecture::where('id', $id)
                       ->with('section')
                       ->with('foto_lecture')
-
                       ->first();
 
 

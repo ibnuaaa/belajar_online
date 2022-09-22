@@ -15,7 +15,7 @@ class Section extends Model
 
     public function lecture()
     {
-        return $this->hasMany(Lecture::class, 'section_id', 'id');
+        return $this->hasMany(Lecture::class, 'section_id', 'id')->with('my_lecture');
     }
 
     public function course()

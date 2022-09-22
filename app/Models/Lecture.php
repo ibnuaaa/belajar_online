@@ -23,6 +23,11 @@ class Lecture extends Model
         return $this->hasOne(Section::class, 'id', 'section_id')->with('course');
     }
 
+    public function my_lecture()
+    {
+        return $this->hasOne(UserLecture::class, 'lecture_id', 'id')->where('user_id', Auth::user()->id);
+    }
+
     public function foto_lecture()
     {
         return $this->hasOne(Document::class, 'object_id', 'id')
