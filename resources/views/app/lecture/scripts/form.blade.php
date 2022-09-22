@@ -38,8 +38,16 @@ function loadSoal(no) {
       $('#soal').html(soal)
       $('#pilihan').html(pilihan)
     } else {
+        if (g_no_soal > 1) {
+            getScore()
+        } else {
+            $('#soal').html('')
+            $('#pilihan').html('')
+            $('#pembahasan_soal').html('')
+            $('#btn-jawab').hide();
+            $('#btn-cek-nilai').hide();
+        }
 
-        getScore()
     }
 
 
@@ -101,6 +109,7 @@ function bukaPembahasan(no) {
 }
 
 function getScore() {
+
 
       $('#soal').html('')
       $('#pilihan').html('')

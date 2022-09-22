@@ -42,6 +42,9 @@ $router->post($prefix.'/jabatan', ['uses' => 'Jabatan\JabatanController@Insert',
 $router->put($prefix.'/jabatan/{id}', ['uses' => 'Jabatan\JabatanController@Update', 'middleware' => ['LogActivity:Jabatan.Update','Jabatan.Update']]);
 $router->delete($prefix.'/jabatan/{id}', ['uses' => 'Jabatan\JabatanController@Delete', 'middleware' => ['LogActivity:Jabatan.Delete','Jabatan.Delete']]);
 
+$router->delete($prefix.'/document/{id}', ['uses' => 'Document\DocumentController@Delete', 'middleware' => ['LogActivity:Document.Delete','Document.Delete']]);
+
+
 // unit kerja
 $router->get($prefix.'/unit_kerja', ['uses' => 'UnitKerja\UnitKerjaBrowseController@get', 'middleware' => ['LogActivity:UnitKerja.View','ArrQuery']]);
 $router->get($prefix.'/unit_kerja/{query:.+}', ['uses' => 'UnitKerja\UnitKerjaBrowseController@get', 'middleware' => ['LogActivity:UnitKerja.View','ArrQuery']]);

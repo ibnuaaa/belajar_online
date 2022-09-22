@@ -50,6 +50,7 @@
                     <div class="col-6 col-md-10">
                         <input type="file" onchange="prepareUpload(this, 'lecture', '{{ $lecture->id }}', false, ['pdf']);" multiple>
                         @if (!empty($lecture->foto_lecture))
+                        <a href="#" onClick="deletePdf({{$lecture->foto_lecture->id}})">Hapus PDF</a>
                         <iframe style="width:100%;height:500px;" id="pdf" ></iframe>
                         @endif
                     </div>

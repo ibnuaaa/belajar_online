@@ -93,6 +93,8 @@ class MiddlewareServiceProvider extends ServiceProvider
         'DocumentUnit.Approve' => \App\Http\Middleware\DocumentUnit\Approve::class,
         'DocumentUnit.Delete' => \App\Http\Middleware\DocumentUnit\Delete::class,
 
+        'Document.Delete' => \App\Http\Middleware\Document\Delete::class,
+
         'JabatanFungsional.Insert' => \App\Http\Middleware\JabatanFungsional\Insert::class,
         'JabatanFungsional.Update' => \App\Http\Middleware\JabatanFungsional\Update::class,
         'JabatanFungsional.Delete' => \App\Http\Middleware\JabatanFungsional\Delete::class,
