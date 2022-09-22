@@ -4,7 +4,7 @@
 					<h4 class="edu_title">Materi Pembelajaran</h4>
 					<div id="accordionExample" class="accordion shadow circullum">
 
-
+						<?php $no_section = 0; ?>
 						@foreach ($section as $key => $val)
 						<!-- Part 1 -->
 						<div class="card">
@@ -23,9 +23,11 @@
 
 									<?php
 											if (!empty($val2->my_lecture)) $is_open = true;
-
 											if (!empty($val->lecture[$key2 - 1]->my_lecture)) $is_open = true;
 
+											if ($no_section === 0) $is_open = true;
+
+											$no_section++;
 									?>
 
 									@if ($is_open)
