@@ -211,7 +211,7 @@ class StorageController extends Controller
 
         // INI BUAT FOTO YANG SINGLE, harus dimasukkan ke array di bawah ini
         if (in_array($Object, [
-          'lecture'
+          'lecture','video'
           ])) {
             Document::where('object', $Object)->where('object_id', $ObjectId)->delete();
         }
