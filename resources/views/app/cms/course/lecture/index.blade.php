@@ -66,6 +66,7 @@
                         <input type="file" onchange="prepareUpload(this, 'video', '{{ $lecture->id }}', false, ['mkv','flv','mp4','mov','avi']);" multiple>
                         <br><br>
                         @if (!empty($lecture->foto_video))
+                            <a href="#" onClick="deletePdf({{$lecture->foto_video->id}})">Hapus Video</a>
                             <video width="100%" height="440" controls style="background:black;">
                               <source src="http://{{ getConfig('basepath') }}/api/preview/{{$lecture->foto_video->storage->key}}" type="video/mp4">
                               Your browser does not support the video tag.
