@@ -93,76 +93,10 @@
         </div>
 
         <!-- Reviews -->
-        <div class="rating-overview border">
-          <div class="rating-overview-box">
-            <span class="rating-overview-box-total">4.2</span>
-            <span class="rating-overview-box-percent">out of 5.0</span>
-            <div class="star-rating" data-rating="5"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i>
-            </div>
-          </div>
 
-          <div class="rating-bars">
-            <div class="rating-bars-item">
-              <span class="rating-bars-name">5 Star</span>
-              <span class="rating-bars-inner">
-                <span class="rating-bars-rating high" data-rating="4.7">
-                  <span class="rating-bars-rating-inner" style="width: 85%;"></span>
-                </span>
-                <strong>85%</strong>
-              </span>
-            </div>
-            <div class="rating-bars-item">
-              <span class="rating-bars-name">4 Star</span>
-              <span class="rating-bars-inner">
-                <span class="rating-bars-rating good" data-rating="3.9">
-                  <span class="rating-bars-rating-inner" style="width: 75%;"></span>
-                </span>
-                <strong>75%</strong>
-              </span>
-            </div>
-            <div class="rating-bars-item">
-              <span class="rating-bars-name">3 Star</span>
-              <span class="rating-bars-inner">
-                <span class="rating-bars-rating mid" data-rating="3.2">
-                  <span class="rating-bars-rating-inner" style="width: 52.2%;"></span>
-                </span>
-                <strong>53%</strong>
-              </span>
-            </div>
-            <div class="rating-bars-item">
-              <span class="rating-bars-name">1 Star</span>
-              <span class="rating-bars-inner">
-                <span class="rating-bars-rating poor" data-rating="2.0">
-                  <span class="rating-bars-rating-inner" style="width:20%;"></span>
-                </span>
-                <strong>20%</strong>
-              </span>
-            </div>
-          </div>
-        </div>
 
         <!-- instructor -->
-        <div class="single_instructor border">
-          <div class="single_instructor_thumb">
-            <a href="#"><img src="assets/img/user-3.jpg" class="img-fluid" alt=""></a>
-          </div>
-          <div class="single_instructor_caption">
-            <h4><a href="#">Jonathan Campbell</a></h4>
-            <ul class="instructor_info">
-              <li><i class="ti-video-camera"></i>72 Videos</li>
-              <li><i class="ti-control-forward"></i>102 Lectures</li>
-              <li><i class="ti-user"></i>Exp. 4 Year</li>
-            </ul>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
-            <ul class="social_info">
-              <li><a href="#"><i class="ti-facebook"></i></a></li>
-              <li><a href="#"><i class="ti-twitter"></i></a></li>
-              <li><a href="#"><i class="ti-linkedin"></i></a></li>
-              <li><a href="#"><i class="ti-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-
+        
         <!-- Reviews -->
         <div class="list-single-main-item fl-wrap border">
           <div class="list-single-main-item-title fl-wrap">
