@@ -196,7 +196,7 @@
 				</div>
 
 				<!-- Submit Reviews -->
-				<div class="edu_wraper">
+				<div class="edu_wraper"  style="display:none;">
 					<h4 class="edu_title">Submit Reviews</h4>
 					<div class="review-form-box form-submit">
 						<form>
@@ -237,7 +237,7 @@
 			</div>
 
 			<!-- Sidebar -->
-			<div class="col-lg-4 col-md-4">
+			<div class="col-lg-4 col-md-4"  style="display:none;">
 				<div class="ed_view_box style_2">
 
 					<div class="p-4">

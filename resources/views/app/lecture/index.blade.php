@@ -167,7 +167,7 @@
         </div>
 
         <!-- Submit Reviews -->
-        <div class="edu_wraper border">
+        <div class="edu_wraper border"  style="display:none;">
           <h4 class="edu_title">Submit Reviews</h4>
           <div class="review-form-box form-submit">
             <form>

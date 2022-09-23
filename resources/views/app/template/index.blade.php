@@ -321,7 +321,7 @@
 				</div>
 
 				<!-- Submit Reviews -->
-				<div class="edu_wraper border">
+				<div class="edu_wraper border"  style="display:none;">
 					<h4 class="edu_title">Submit Reviews</h4>
 					<div class="review-form-box form-submit">
 						<form>
@@ -361,7 +361,7 @@
 
 			</div>
 
-			<div class="col-lg-4 col-md-4">
+			<div class="col-lg-4 col-md-4" style="display:none;">
 
 				<!-- Course info -->
 				<div class="ed_view_box style_3 border py-3">
