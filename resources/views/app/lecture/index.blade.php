@@ -96,9 +96,9 @@
 
 
         <!-- instructor -->
-        
+
         <!-- Reviews -->
-        <div class="list-single-main-item fl-wrap border">
+        <div class="list-single-main-item fl-wrap border"  style="display:none;">
           <div class="list-single-main-item-title fl-wrap">
             <h3>Item Reviews -  <span> 3 </span></h3>
           </div>
