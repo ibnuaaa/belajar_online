@@ -76,8 +76,9 @@
 
 
           <div id="soal"></div>
-          <ul class="no-ul-list" id="pilihan">
-          </ul>
+          <ul class="no-ul-list" id="pilihan"></ul>
+          <textarea class="form-control" id="jawaban_essay" name="jawaban_essay"></textarea>
+          
 
           <br><br>
           <a onclick="return jawab();" id="btn-jawab" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>

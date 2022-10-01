@@ -27,48 +27,54 @@
                         <h2 class="font-montserrat all-caps hint-text">Rangking</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-6 col-md-2">
-                        Nama
-                    </div>
-                    <div class="col-6 col-md-10">
-                        {{ $lecture->name }}
-                    </div>
-                </div>
                 <div class="row mt-4">
-                    <div class="col-6 col-md-10">
+                    <div class="col-12">
                         <table class="table table-bordered table-sm">
 
 
                             <tr>
-                              <th>
+                              <th style="width: 5%;">
                                   No
                               </th>
-                              <th>
-                                  Nama
+                              <th style="width: 20%;">
+                                  Soal
                               </th>
-                              <th>
+                              <th style="width: 5%;">
+                                  Bobot
+                              </th>
+                              <th style="width: 20%;">
+                                  Pembahasan
+                              </th>
+                              <th style="width: 30%;">
+                                  Jawaban Siswa
+                              </th>
+                              <th style="width: 6%;">
                                   Nilai
-                              </th>
-                              <th>
-                                  Aksi
                               </th>
                             </tr>
 
 
-                            @foreach ($user_lecture as $key => $val)
+                            @foreach ($user_lecture->user_exercise as $key => $val)
                             <tr>
                               <td>
                                   {{ $key+1 }}
                               </td>
                               <td>
-                                  {{ $val->user->name }}
+                                  {{ $val->exercise->name }}
                               </td>
                               <td>
-                                  {{ $val->nilai }}
+                                  {{ $val->exercise->bobot }}
                               </td>
                               <td>
-                                  <a href="/course/user_lecture/{{ $val->id }}" class="btn btn-primary btn-sm">Cek !!</a>
+                                  {{ $val->exercise->decription }}
+                              </td>
+                              <td>
+                                  {{ $val->user_exercise_answer->description }}
+                                  {{ !empty($val->user_exercise_answer->exercise_option->name) ? $val->user_exercise_answer->exercise_option->name : '' }}
+                                  
+                              </td>
+                              <td>
+                                  <input name="nilai" class="form-control" type="text" data-id="{{ $val->id }}" value="{{ round($val->nilai) }}" onChange="saveUserExercise(this)" />
                               </td>
                             </tr>
                             @endforeach
@@ -88,5 +94,5 @@
 @endsection
 
 @section('formValidationScript')
-@include('app.cms.course.rank.scripts.form')
+@include('app.cms.course.user_lecture.scripts.form')
 @endsection

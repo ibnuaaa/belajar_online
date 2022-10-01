@@ -12,4 +12,9 @@ class UserExerciseAnswer extends Model
 {
     use SoftDeletes;
     protected $table = 'user_excercise_answer';
+
+    public function exercise_option()
+    {
+        return $this->hasOne(ExerciseOption::class, 'id', 'excercise_option_id');
+    }
 }

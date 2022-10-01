@@ -88,6 +88,10 @@
                                     <textarea name="name" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise({{$value->id}}, this);">{{ $value->name }}</textarea>
                                     <br>
                                     <br>
+                                    Bobot :
+                                    <input type="text" name="bobot" class="form-control" onchange="saveEditExcercise({{$value->id}}, this);" value="{{ $value->bobot }}" />
+                                    <br>
+                                    <br>
                                     Pembahasan :
                                     <textarea name="description" class="form-control" style="height:200px;width: 100%;" onchange="saveEditExcercise({{$value->id}}, this);">{{ $value->decription }}</textarea>
                                     <br>

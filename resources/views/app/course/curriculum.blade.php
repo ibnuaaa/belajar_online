@@ -6,6 +6,7 @@
 
 						<?php $no_section = 0; ?>
 						@foreach ($section as $key => $val)
+						@if(empty($lecture->section->id) || $lecture->section->id == $val->id)
 						<!-- Part 1 -->
 						<div class="card">
 							<div id="headingOne" class="card-header bg-white shadow-sm border-0">
@@ -14,22 +15,23 @@
 							<div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
 							<div class="card-body pl-3 pr-3">
 								<ul class="lectures_lists">
-
+									
 									<?php
 											$is_open = false;
 									?>
 
 									@foreach ($val->lecture as $key2 => $val2)
 
-									<?php
+									<?php									
 											if (!empty($val2->my_lecture)) $is_open = true;
 											if (!empty($val->lecture[$key2 - 1]->my_lecture)) $is_open = true;
 
-											if ($no_section === 0) $is_open = true;
+											// if ($no_section === 0)
+											$is_open = true;
 
 											$no_section++;
 									?>
-
+									
 									@if ($is_open)
 										<li><div class="lectures_lists_title"><i class="ti-control-play"></i><a href="/f/lecture/{{ $val2->id }}">{{ $val2->name }}</a></div></li>
 									@else
@@ -39,12 +41,13 @@
 									<?php
 											$is_open = false;
 									?>
-
+									
 									@endforeach
 								</ul>
 							</div>
 							</div>
 						</div>
+						@endif
 						@endforeach
 
 

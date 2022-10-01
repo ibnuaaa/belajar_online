@@ -156,6 +156,19 @@ class CourseController extends Controller
         ]);
     }
 
+    public function UserLecture(Request $request, $id){
+
+
+        $UserLecture = UserLecture::where('id', $id)
+                ->with('user_exercise')
+                ->first();
+
+
+        return view('app.cms.course.user_lecture.index', [
+          'user_lecture' => $UserLecture
+        ]);
+    }
+
     public function Edit(Request $request, $id)
     {
         $Course = CourseBrowseController::FetchBrowse($request)

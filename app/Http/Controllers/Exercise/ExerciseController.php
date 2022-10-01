@@ -71,45 +71,54 @@ class ExerciseController extends Controller
     {
 
         $exercise_option_id = $request->input('exercise_option_id');
+        $description = $request->input('description');
+        $exercise_id = $request->input('exercise_id');
 
-        $ExerciseOption = ExerciseOption::where('id', $exercise_option_id)
-              ->with('exercise')
-              ->first();
+        $Exercise = Exercise::where('id', $exercise_id)
+        ->first();
+
 
         $nilai = 0;
-        if ($ExerciseOption->is_answer == 1) {
-              $nilai = 1;
+        if (!empty($exercise_option_id)) {
+            $ExerciseOption = ExerciseOption::where('id', $exercise_option_id)
+                ->with('exercise')
+                ->first();
+
+            $nilai = 0;
+            if ($ExerciseOption->is_answer == 1) {
+                $nilai = $Exercise->bobot;
+            }
         }
-
-        $Exercise = Exercise::where('lecture_id', $ExerciseOption->exercise->lecture_id)
-              ->get();
-
-
-        $total_soal = count($Exercise);
+        
 
 
 
 
-        $UserLecture = UserLecture::where('user_id', MyAccount()->id)->where('lecture_id',$ExerciseOption->exercise->lecture_id)->first();
+
+
+        
+
+        $UserLecture = UserLecture::where('user_id', MyAccount()->id)->where('lecture_id',$Exercise->lecture_id)->first();
+
         if (empty($UserLecture)) {
             $UserLecture = new UserLecture();
-            $UserLecture->lecture_id  = $ExerciseOption->exercise->lecture_id;
+            $UserLecture->lecture_id  = $Exercise->lecture_id;
             $UserLecture->user_id  = MyAccount()->id;
         }
         $UserLecture->save();
-
-        $UserExercise = UserExercise::where('user_id', MyAccount()->id)->where('excercise_id',$ExerciseOption->exercise_id)->first();
-
+        
+        $UserExercise = UserExercise::where('user_id', MyAccount()->id)->where('excercise_id',$Exercise->id)->first();
+        
 
         if (empty($UserExercise)) {
             $UserExercise = new UserExercise();
             $UserExercise->user_lecture_id =$UserLecture->id;
             $UserExercise->user_id = MyAccount()->id;
-            $UserExercise->excercise_id =$ExerciseOption->exercise_id;
+            $UserExercise->excercise_id =$Exercise->id;
         }
         $UserExercise->nilai = $nilai;
         $UserExercise->save();
-
+        
 
         $UserExerciseAnswer = UserExerciseAnswer::where('user_id', MyAccount()->id)->where('user_excercise_id',$UserExercise->id)->first();
         if (empty($UserExerciseAnswer)) {
@@ -118,14 +127,20 @@ class ExerciseController extends Controller
             $UserExerciseAnswer->user_excercise_id =$UserExercise->id;
         }
         $UserExerciseAnswer->excercise_option_id = $exercise_option_id;
+        $UserExerciseAnswer->description = $description;
         $UserExerciseAnswer->save();
 
-        $UserExerciseBetul = UserExercise::where('nilai', 1)->where('user_lecture_id',$UserLecture->id)->get();
+        $UserExerciseBetul = UserExercise::where('nilai', '>', '0')->where('user_lecture_id',$UserLecture->id)->get();
+
+        $totalBetul = 0;
+        foreach ($UserExerciseBetul as $key => $value) {
+            $totalBetul += $value->nilai;
+        }
 
         $jml_betul = count($UserExerciseBetul);
 
-        $UserLecture = UserLecture::where('user_id', MyAccount()->id)->where('lecture_id',$ExerciseOption->exercise->lecture_id)->first();
-        $UserLecture->nilai = ($jml_betul/$total_soal) * 100;
+        $UserLecture = UserLecture::where('user_id', MyAccount()->id)->where('lecture_id',$Exercise->lecture_id)->first();
+        $UserLecture->nilai = $totalBetul;
         $UserLecture->save();
 
 
