@@ -24,7 +24,7 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="font-montserrat all-caps hint-text">Rangking</h2>
+                        <h2 class="font-montserrat all-caps hint-text">Penilaian</h2>
                     </div>
                 </div>
                 <div class="row mt-4">

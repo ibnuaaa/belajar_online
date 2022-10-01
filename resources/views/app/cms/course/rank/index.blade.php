@@ -68,7 +68,8 @@
                                   {{ $val->nilai }}
                               </td>
                               <td>
-                                  <a href="/course/user_lecture/{{ $val->id }}" class="btn btn-primary btn-sm">Cek !!</a>
+                              <a href="/course/user_lecture/{{ $val->id }}" class="btn btn-primary btn-sm">Cek !!</a>
+                              
                               </td>
                             </tr>
                             @endforeach

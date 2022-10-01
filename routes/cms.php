@@ -27,6 +27,7 @@ $router->get('/course/lecture/{id}', 'CMS\Course\CourseController@Lecture');
 $router->get('/course/lecture/{id}/rank', 'CMS\Course\CourseController@Rank');
 $router->get('/course/{id}', 'CMS\Course\CourseController@Detail');
 $router->get('/course/user_lecture/{id}', 'CMS\Course\CourseController@UserLecture');
+$router->get('/course/user_lecture/{id}/download', 'CMS\Course\CourseController@UserLectureDownload');
 
 
 $router->get('/home', 'CMS\Home\HomeController@Home');

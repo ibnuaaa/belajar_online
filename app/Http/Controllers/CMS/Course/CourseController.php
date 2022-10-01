@@ -20,6 +20,8 @@ use App\Models\Section;
 use App\Models\Lecture;
 use App\Models\UserLecture;
 use App\Models\Document;
+use App\Models\Exercise;
+
 
 
 use Illuminate\Support\Facades\Auth;
@@ -167,6 +169,197 @@ class CourseController extends Controller
         return view('app.cms.course.user_lecture.index', [
           'user_lecture' => $UserLecture
         ]);
+    }
+
+    public function UserLectureDownload_old(Request $request, $id){
+
+        $user_lecture = UserLecture::where('id', $id)
+        ->with('user_exercise')
+        ->with('user')
+        ->first();
+
+        header("Cache-Control: no-cache, no-store, must-revalidate");
+        header("Content-Type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=NILAI_SISWA_".$user_lecture->user->username."_".date("Y-m-d_H:i:s").".xls");
+
+
+        // cetak($user_lecture->user);
+        // die();
+
+        echo '
+        
+
+            <table class="table table-bordered table-sm">
+                <tr>
+                    <th>
+                        NAMA
+                    </th>
+                    <td colspan="4">
+                        '.$user_lecture->user->name.'
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        NIS
+                    </th>
+                    <td colspan="4">
+                    '.$user_lecture->user->username.'
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        NILAI
+                    </th>
+                    <td style="align:left:">
+                    '.$user_lecture->nilai.'
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        <br>
+                    </th>
+                    <td colspan="4" style="align:left:">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th style="width: 5%;">
+                        No
+                    </th>
+                    <th style="width: 20%;">
+                        Soal
+                    </th>
+                    <th style="width: 30%;">
+                        Jawaban Siswa
+                    </th>
+                    <th style="width: 6%;">
+                        Nilai
+                    </th>
+                </tr>
+            ';
+
+
+            foreach ($user_lecture->user_exercise as $key => $val) {
+                echo '<tr>
+                    <td>
+                        '.($key+1).'
+                    </td>
+                    <td>
+                        '. ($val->exercise->name) .'
+                    </td>
+                    <td>
+                        '.($val->user_exercise_answer->description).'
+                        '.(!empty($val->user_exercise_answer->exercise_option->name) ? $val->user_exercise_answer->exercise_option->name : '').'                        
+                    </td>
+                    <td>
+                        '.($val->nilai).'
+                    </td>
+                </tr>
+                ';
+            }
+            
+            echo '
+            </table>
+        
+        
+        ';
+
+        die();
+    }
+
+
+    public function UserLectureDownload(Request $request, $id){
+
+        $lecture_id = $id;
+
+        $user_lecture = UserLecture::where('lecture_id', $lecture_id)
+        ->with('user_exercise')
+        ->with('user')
+        ->get();
+
+        $exercise = Exercise::where('lecture_id', $lecture_id)
+        ->get();
+
+
+        header("Cache-Control: no-cache, no-store, must-revalidate");
+        header("Content-Type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=NILAI_SISWA_".date("Y-m-d_H:i:s").".xls");
+
+        foreach ($user_lecture as $key => $value) {
+        
+        echo '
+        
+
+            <table class="table table-bordered table-sm" border=1>
+                <tr>
+                    <th>
+                        NAMA
+                    </th>
+                    <th>
+                        NIS
+                    </th>
+                    <th>
+                        NILAI
+                    </th>
+        ';
+
+        foreach ($exercise as $key => $value) {
+            echo '
+                <th>
+                    '.$value->name.'
+                </th>
+            ';
+        }
+
+        echo '
+            </tr>
+        ';
+
+
+        foreach ($user_lecture as $key => $value) {
+            echo '
+                <tr>
+                <td>'.$value->user->name.'</td>
+                <td>'.$value->user->username.'</td>
+                <td>'.$value->nilai.'</td>
+                
+            ';
+
+
+            foreach ($exercise as $key2 => $value2) {
+
+                foreach ($value->user_exercise as $key3 => $value3) {
+                    if ($value3->excercise_id == $value2->id) {
+
+                        $color = 'black';
+                        if (!empty($value3->user_exercise_answer->exercise_option) && $value3->user_exercise_answer->exercise_option->is_answer != '1') {
+                            $color = 'red';
+                        }
+
+                        echo '
+                            <td style="color:'.$color.';">
+                                '.(!empty($value3->user_exercise_answer->exercise_option->name) ? $value3->user_exercise_answer->exercise_option->name : $value3->user_exercise_answer->description).'
+                            </td>
+                        ';
+                    }
+                }
+            }
+            echo "</tr>";
+        }
+
+
+
+
+        }
+            
+            echo '
+            </table>
+        
+        
+        ';
+
+        die();
     }
 
     public function Edit(Request $request, $id)
