@@ -45,6 +45,23 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-6 col-md-2">
+                        Durasi
+                    </div>
+                    <div class="col-6 col-md-10 row">
+
+                        <div class="form-group col-3">
+                            <div class="input-group mb-3">
+                            <input name="durasi" type="text" style="width: 50px;" class="form-control" value="{{ $lecture->durasi }}" onchange="saveEditLecture(this);">
+                            <span class="input-group-text">Menit</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6 col-md-2">
                         Upload PDF
                     </div>
                     <div class="col-6 col-md-10">

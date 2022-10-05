@@ -229,6 +229,12 @@ class MiddlewareServiceProvider extends ServiceProvider
         'UserExercise.Update' => \App\Http\Middleware\UserExercise\Update::class,
         'UserExercise.Delete' => \App\Http\Middleware\UserExercise\Delete::class,
 
+        'UserLecture.Insert' => \App\Http\Middleware\UserLecture\Insert::class,
+        'UserLecture.Start' => \App\Http\Middleware\UserLecture\Start::class,
+        'UserLecture.Update' => \App\Http\Middleware\UserLecture\Update::class,
+        'UserLecture.Delete' => \App\Http\Middleware\UserLecture\Delete::class,
+
+        
         'PushNotification.Insert' => \App\Http\Middleware\PushNotification\Insert::class,
 
     ];

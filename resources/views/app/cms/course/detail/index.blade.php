@@ -111,7 +111,7 @@
                                                   <a href="#" class="btn btn-danger btn-sm" onclick="return deleteLecture('{{$val2->id}}');"><i class="fa fa-trash"></i> Hapus</a>
                                                   <a href="/course/lecture/{{ $val2->id }}" class="btn btn-success btn-sm" ><i class="fa fa-eye"></i> Detail</a>
                                                   <a href="/course/lecture/{{ $val2->id }}/rank" class="btn btn-primary btn-sm" ><i class="fa fa-child"></i> Peringkat</a>
-                                                  <a href="/course/user_lecture/{{ $val2->id }}/download" class="btn btn-warning btn-sm">Download</a>
+                                                  <a href="/course/user_lecture/{{ $val2->id }}/download" class="btn btn-warning btn-sm"><i class="fa fa-spreadsheet"></i> Download</a>
                                               </div>
                                           </td>
                                       </tr>

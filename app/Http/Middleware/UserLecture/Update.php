@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware\Lecture;
+namespace App\Http\Middleware\UserExercise;
 
-use App\Models\Lecture;
+use App\Models\UserExercise;
 
 use Illuminate\Support\Facades\Hash;
 use Closure;
@@ -14,22 +14,19 @@ class Update extends BaseMiddleware
 {
     private function Initiate($request)
     {
-        $this->Model->Lecture = Lecture::where('id', $this->Id)->first();
-        if ($this->Model->Lecture) {
-          if (!empty($this->_Request->input('name'))) $this->Model->Lecture->name = $this->_Request->input('name');
-          if (!empty($this->_Request->input('description'))) $this->Model->Lecture->description = $this->_Request->input('description');
-          if (!empty($this->_Request->input('video'))) $this->Model->Lecture->video = $this->_Request->input('video');
-          if (!empty($this->_Request->input('durasi'))) $this->Model->Lecture->durasi = $this->_Request->input('durasi');
+        $this->Model->UserExercise = UserExercise::where('id', $this->Id)->first();
+        if ($this->Model->UserExercise) {
+          if(!empty($this->_Request->input('nilai'))) $this->Model->UserExercise->nilai = $this->_Request->input('nilai');
         }
     }
 
     private function Validation()
     {
         // $validator = Validator::make($this->_Request->all(), [
-        //     // 'name' => 'required'
+        //     'name' => 'required'
         // ]);
-        // if (!$this->Model->Lecture) {
-        //     $this->Json::set('exception.key', 'NotFoundLecture');
+        // if (!$this->Model->UserExercise) {
+        //     $this->Json::set('exception.key', 'NotFoundUserExercise');
         //     $this->Json::set('exception.message', trans('validation.'.$this->Json::get('exception.key')));
         //     return false;
         // }

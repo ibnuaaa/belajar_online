@@ -131,7 +131,8 @@ class HomeController extends Controller
           return view('app.lecture.index', [
             'id' => $id,
             'section' => $Section,
-            'lecture' => $Lecture
+            'lecture' => $Lecture,
+            'user_lecture' => $UserLecture
           ]);
 
     }

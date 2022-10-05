@@ -46,6 +46,38 @@
                   <span>Jumlah Siswa</span>
                   20
                 </li>
+
+                @if (!empty($lecture->durasi))
+
+                <?php  
+                  $mulai = $start_at=date_create($user_lecture->start_at);
+                  date_add($mulai,date_interval_create_from_date_string($lecture->durasi . " minutes"));
+                  $end_at = date_format($mulai,"Y-m-d H:i:s");
+                  $selisih = date_diff(date_create($end_at), date_create(date('Y-m-d H:i:s')));
+
+                ?>
+                <li>
+                  <span>Durasi</span>
+                  {{ $lecture->durasi }} menit
+                </li>
+                <li>
+                  <span>Waktu Mulai - Selesai</span>
+                  {{ $user_lecture->start_at }}<br>
+                  {{ $end_at }}<br>
+                </li>
+                <li>
+                  <span>Sisa Waktu</span>
+                  @if (!empty($lecture->durasi) && (date_create($end_at) > date_create(date('Y-m-d H:i:s'))))
+                  <span id="sisa-waktu" style="font-weight:bold;color:black;font-size:13px;">
+                    {{ $selisih->i }} Menit <br>{{ $selisih->s }} Detik
+                  </span>
+                  @else 
+                  <span style="font-weight:bold;color:black;font-size:13px;">
+                    -
+                  </span>
+                  @endif
+                </li>
+                @endif
               </ul>
             </div>
           </div>
@@ -75,17 +107,29 @@
           @endif
 
 
-          <div id="soal"></div>
-          <ul class="no-ul-list" id="pilihan"></ul>
-          <textarea class="form-control" id="jawaban_essay" name="jawaban_essay"></textarea>
+          @if (count($lecture->exercise) > 0)
           
+            @if (!empty($lecture->durasi) && (date_create($end_at) > date_create(date('Y-m-d H:i:s'))))
 
-          <br><br>
-          <a onclick="return jawab();" id="btn-jawab" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
-          <a onclick="return getScore();" id="btn-cek-nilai" style="display:none;" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Cek Nilai</a>
+              <div id="soal"></div>
+              <ul class="no-ul-list" id="pilihan"></ul>
+              <textarea class="form-control mb-3" id="jawaban_essay" name="jawaban_essay"></textarea>
 
-          <div id="pembahasan_soal">
-          </div>
+              <a onclick="return jawab();" id="btn-jawab" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Jawab</a>
+              <a onclick="return getScore();" id="btn-cek-nilai" style="display:none;" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Cek Nilai</a>
+              
+              
+              <a onclick="return startSoal()" id="btn-start-soal" href="#" class="btn btn-success text-white"><i class="fas fa-check"></i> Mulai Menjawab Soal</a>
+              
+
+              <div id="pembahasan_soal">
+              </div>
+            @else
+            <h2>Waktumu sudah habis</h2>
+            @endif
+
+          @endif
+
 
         </div>
 

@@ -144,4 +144,5 @@ $router->get($prefix.'/user_lecture', ['uses' => 'UserLecture\UserLectureBrowseC
 $router->get($prefix.'/user_lecture/{query:.+}', ['uses' => 'UserLecture\UserLectureBrowseController@get', 'middleware' => ['ArrQuery']]);
 $router->post($prefix.'/user_lecture', ['uses' => 'UserLecture\UserLectureController@Insert', 'middleware' => ['LogActivity:UserLecture.Insert','UserLecture.Insert']]);
 $router->put($prefix.'/user_lecture/{id}', ['uses' => 'UserLecture\UserLectureController@Update', 'middleware' => ['LogActivity:UserLecture.Update','UserLecture.Update']]);
+$router->put($prefix.'/user_lecture/{id}/start', ['uses' => 'UserLecture\UserLectureController@Start', 'middleware' => ['LogActivity:UserLecture.Start','UserLecture.Start']]);
 $router->delete($prefix.'/user_lecture/{id}', ['uses' => 'UserLecture\UserLectureController@Delete', 'middleware' => ['LogActivity:UserLecture.Delete','UserLecture.Delete']]);

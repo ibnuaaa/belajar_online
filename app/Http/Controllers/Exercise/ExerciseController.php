@@ -109,7 +109,6 @@ class ExerciseController extends Controller
         
         $UserExercise = UserExercise::where('user_id', MyAccount()->id)->where('excercise_id',$Exercise->id)->first();
         
-
         if (empty($UserExercise)) {
             $UserExercise = new UserExercise();
             $UserExercise->user_lecture_id =$UserLecture->id;
@@ -119,7 +118,6 @@ class ExerciseController extends Controller
         $UserExercise->nilai = $nilai;
         $UserExercise->save();
         
-
         $UserExerciseAnswer = UserExerciseAnswer::where('user_id', MyAccount()->id)->where('user_excercise_id',$UserExercise->id)->first();
         if (empty($UserExerciseAnswer)) {
             $UserExerciseAnswer = new UserExerciseAnswer();

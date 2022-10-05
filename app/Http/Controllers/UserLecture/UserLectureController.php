@@ -72,6 +72,16 @@ class UserLectureController extends Controller
         return response()->json(Json::get(), 202);
     }
 
+    public function Start(Request $request)
+    {
+        $Model = $request->Payload->all()['Model'];
+        $Model->UserLecture->start_at = date('Y-m-d H:i:s');
+        $Model->UserLecture->save();
+
+        Json::set('data', $this->SyncData($request, $Model->UserLecture->id));
+        return response()->json(Json::get(), 202);
+    }
+
     public function Delete(Request $request)
     {
         $Model = $request->Payload->all()['Model'];
