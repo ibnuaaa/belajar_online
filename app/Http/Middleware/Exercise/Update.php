@@ -18,6 +18,7 @@ class Update extends BaseMiddleware
         if ($this->Model->Exercise) {
           if(!empty($this->_Request->input('name'))) $this->Model->Exercise->name = $this->_Request->input('name');
           if(!empty($this->_Request->input('description'))) $this->Model->Exercise->decription = $this->_Request->input('description');
+          if(!empty($this->_Request->input('bobot'))) $this->Model->Exercise->bobot = $this->_Request->input('bobot');
         }
     }
 

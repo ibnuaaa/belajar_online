@@ -101,12 +101,12 @@
 										<form id="loginForm" class="p-t-15" role="form" style="opacity: 1 !important;">
 											<div class="form-group">
 												<label>Alamat Email / Username*</label>
-												<input type="text" class="form-control" value="root" name="username">
+												<input type="text" class="form-control" value="" name="username">
 											</div>
 
 											<div class="form-group">
 												<label>Kata Sandi*<a href="#" class="elio_right">Lupa Password?</a></label>
-												<input type="password" class="form-control" value="Asdasd123!!" name="password">
+												<input type="password" class="form-control" value="" name="password">
 											</div>
 
 											<div class="form-group">
